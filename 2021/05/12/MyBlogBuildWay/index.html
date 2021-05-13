@@ -233,21 +233,21 @@
 <h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1 安装git"></a>1 安装git</h2><h3 id="1-1-安装Cygwin"><a href="#1-1-安装Cygwin" class="headerlink" title="1.1 安装Cygwin"></a>1.1 安装Cygwin</h3><blockquote>
 <p>下载地址:<a target="_blank" rel="noopener" href="http://www.cygwin.com/">Gygwin官网</a></p>
 </blockquote>
-<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin.png" srcset="/img/loading.gif" lazyload alt="Cygwin-1"></p>
+<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-1"></p>
 <blockquote>
 <p>直接安装一路默认</p>
 </blockquote>
-<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin2.png" srcset="/img/loading.gif" lazyload alt="Cygwin-2"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin3.png" srcset="/img/loading.gif" lazyload alt="Cygwin-3"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin4.png" srcset="/img/loading.gif" lazyload alt="Cygwin-4"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin5.png" srcset="/img/loading.gif" lazyload alt="Cygwin-5"></p>
+<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin2.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-2"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin3.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-3"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin4.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-4"><br><img src="/2021/05/12/MyBlogBuildWay/Cygwin5.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-5"></p>
 <blockquote>
 <p>这里推荐使用国内的镜像网站（找不到得自己添加）</p>
 </blockquote>
-<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin6.png" srcset="/img/loading.gif" lazyload alt="Cygwin-6"></p>
+<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin6.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-6"></p>
 <blockquote>
 <p>这里是一些必须安装的包</p>
 </blockquote>
-<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin7.png" srcset="/img/loading.gif" lazyload alt="Cygwin-7"></p>
+<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin7.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-7"></p>
 <h3 id="1-2-在Cygwin下使用git的SSH服务"><a href="#1-2-在Cygwin下使用git的SSH服务" class="headerlink" title="1.2 在Cygwin下使用git的SSH服务"></a>1.2 在Cygwin下使用git的SSH服务</h3><h5 id="1-2-1-在Cygwin打开后，默认在-目录，使用如下命令查看实际在Windows中的路径"><a href="#1-2-1-在Cygwin打开后，默认在-目录，使用如下命令查看实际在Windows中的路径" class="headerlink" title="1.2.1 在Cygwin打开后，默认在~目录，使用如下命令查看实际在Windows中的路径"></a>1.2.1 在Cygwin打开后，默认在~目录，使用如下命令查看实际在Windows中的路径</h5><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>cygpath -w ~<span class="hljs-regexp">/</span><br></code></pre></td></tr></table></figure>
-<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin8.png" srcset="/img/loading.gif" lazyload alt="Cygwin-8"></p>
+<p><img src="/2021/05/12/MyBlogBuildWay/Cygwin8.PNG" srcset="/img/loading.gif" lazyload alt="Cygwin-8"></p>
 <h5 id="1-2-2-使用ssh-keygen命令生成密钥"><a href="#1-2-2-使用ssh-keygen命令生成密钥" class="headerlink" title="1.2.2 使用ssh-keygen命令生成密钥"></a>1.2.2 使用ssh-keygen命令生成密钥</h5><p>生成的.ssh文件夹在C:\cygwin64\home\ad662下，.ssh文件夹里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，id_rsa.pub是公钥。</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>ssh-keygen -t rsa -C <span class="hljs-string">&quot;youremail@163.com&quot;</span><br></code></pre></td></tr></table></figure>
 <h5 id="1-2-3-设置GitHub-SSH-Keys。"><a href="#1-2-3-设置GitHub-SSH-Keys。" class="headerlink" title="1.2.3 设置GitHub SSH Keys。"></a>1.2.3 设置GitHub SSH Keys。</h5><p>登陆GitHub-&gt;Settings-&gt;“SSH Keys”，然后，点“Add SSH Key”，起个Title，在Key文本框里粘贴id_rsa.pub文件的内容，点“Add Key”。</p>
