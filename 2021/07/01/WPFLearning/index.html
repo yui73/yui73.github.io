@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/headicon.jpg">
+  <link rel="icon" href="/img/headicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Yui">
+  <meta name="keywords" content="">
+  
+  <title>WPF学习 - Yui&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Yui's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Yui's Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/4.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="WPF学习">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-01 10:30" pubdate>
+        2021年7月1日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">WPF学习</h1>
+            
+            <div class="markdown-body">
+              <h1 id="WPF学习"><a href="#WPF学习" class="headerlink" title="WPF学习"></a>WPF学习</h1><blockquote>
+<p>学习视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ht411e7Fe">刘铁猛</a></p>
+</blockquote>
+<blockquote>
+<p>学习教材：《深入浅出WPF》</p>
+</blockquote>
+<h2 id="剖析简单的WPF程序"><a href="#剖析简单的WPF程序" class="headerlink" title="剖析简单的WPF程序"></a>剖析简单的WPF程序</h2><h3 id="0-预备知识"><a href="#0-预备知识" class="headerlink" title="0 预备知识"></a>0 预备知识</h3><ul>
+<li>什么是WPF<br>三层结构：<code>（数据层-&gt;业务逻辑层-&gt;表示层）</code></li>
+<li>什么是XAML<br>是WPF技术中专门用于设计UI的语言。<br>实现了UI与逻辑分离。<br>是一种单纯的声明型语言，无法加入程序逻辑，与逻辑相关的代码统统集中在程序逻辑层<ul>
+<li>“高内聚-低耦合”</li>
+<li>Template功能。</li>
+<li>Atrribute-属性</li>
+</ul>
+</li>
+<li> 将cs文件编译完成过后会生成.dll文件，别的程序员可以直接引用这个.dll文件</li>
+<li>Solution层</li>
+<li>Project层(窗口/控制台应用程序/类库)：编译的结果叫做<br><code>项目集Assembly</code> <ul>
+<li>Properties装着资源文件的描述 </li>
+<li>Resources装着类库：<code>&#123;&#125;</code>是一个命名空间；</li>
+<li>两对<code>.xaml</code>文件：<code>APP.xaml</code>对应应用程序本身，其中<code>StartupUri:MainWindow.xaml</code>表示MainWindow为程序启动时的主窗体。</li>
+</ul>
+</li>
+<li>Canvas可以进行拖拽式界面设计</li>
+</ul>
+<h3 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h3><h3 id="1-1-解析-xaml和-cs文件"><a href="#1-1-解析-xaml和-cs文件" class="headerlink" title="1.1 解析.xaml和.cs文件"></a>1.1 解析.xaml和.cs文件</h3><ul>
+<li><code>partial</code>关键字：分部类，类可以分开在两个地方写，编译时会进行合并（也就是将<code>.xaml</code>和<code>.cs</code>合并在一个类里）</li>
+</ul>
+<h3 id="1-2-浅析用户界面的树形结构"><a href="#1-2-浅析用户界面的树形结构" class="headerlink" title="1.2 浅析用户界面的树形结构"></a>1.2 浅析用户界面的树形结构</h3><ul>
+<li>Dos用户界面 - 文字用户界面</li>
+<li>GUI - 图形用户界面 - 友好的用户界面</li>
+</ul>
+<p>WPF制作的用户界面是树形结构。Visual C++、Delphi、VB都是平面结构的。</p>
+<h3 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h3><h4 id="在-xaml中为对象属性赋值"><a href="#在-xaml中为对象属性赋值" class="headerlink" title="在.xaml中为对象属性赋值"></a>在<code>.xaml</code>中为对象属性赋值</h4><p>对象的数据存储方式有：字段+属性；属性在对外暴露的场景里更加安全，当遇到脏数据时，可以使用set方法对脏数据进行过滤。</p>
+<h6 id="方法一：使用Attribute进行赋值"><a href="#方法一：使用Attribute进行赋值" class="headerlink" title="方法一：使用Attribute进行赋值"></a>方法一：使用Attribute进行赋值</h6><p>这种方法为三种之中最简单的，也很方便。<br>缺陷：只能使用简单的字符串赋值，没有办法赋非常复杂的值。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">Path</span> <span class="hljs-attr">Data</span>=<span class="hljs-string">&quot;M 0,0 L 200,100 L 100,200 Z&quot;</span> <span class="hljs-attr">Stroke</span>=<span class="hljs-string">&quot;Black&quot;</span> <span class="hljs-attr">Fill</span>=<span class="hljs-string">&quot;Red&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>使用TypeConverter类进行映射（在MVVM中有自带的）</p>
+<blockquote>
+<p>当前程序集的名空间一般定义为：local</p>
+</blockquote>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">xmlns:<span class="hljs-keyword">local</span>=<span class="hljs-string">&quot;clr-namespace:XXX&quot;</span><br></code></pre></td></tr></table></figure>
+<h6 id="方法二：用属性标签赋值"><a href="#方法二：用属性标签赋值" class="headerlink" title="方法二：用属性标签赋值"></a>方法二：用属性标签赋值</h6><blockquote>
+<p>对应对象属性。<br>缺陷：程序变得很繁琐。</p>
+</blockquote>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-section">&lt;Button /&gt;</span>          <span class="hljs-comment">#空标签</span><br><span class="hljs-section">&lt;Button&gt;</span><span class="hljs-section">&lt;/Button&gt;</span>   <span class="hljs-comment">#标签的内容 与对象的内容区分</span><br></code></pre></td></tr></table></figure>
+<h6 id="方法三：使用标签扩展的方式赋值"><a href="#方法三：使用标签扩展的方式赋值" class="headerlink" title="方法三：使用标签扩展的方式赋值"></a>方法三：使用标签扩展的方式赋值</h6><p>方法如下：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">Text</span>=<span class="hljs-string">&quot;&#123;StaticResource ResourceKey=stringHello&#125;&quot;</span><br><span class="hljs-attr">Text</span>=<span class="hljs-string">&quot;&#123;Binding ElementName=sld, Path=Value&#125;&quot;</span><br><br><span class="hljs-comment"># 标签扩展的属性用`逗号`隔开</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Lesson-3"><a href="#Lesson-3" class="headerlink" title="Lesson 3"></a>Lesson 3</h3><h4 id="3-1-事件处理器与代码后置"><a href="#3-1-事件处理器与代码后置" class="headerlink" title="3.1 事件处理器与代码后置"></a>3.1 事件处理器与代码后置</h4><blockquote>
+<p>.NET平台的处理机制为事件</p>
+</blockquote>
+<p>事件五个关键点</p>
+<ul>
+<li>事件拥有者</li>
+<li>事件拥有者 拥有 哪些事件</li>
+<li>事件响应者</li>
+<li>事件响应者 用哪些方法 响应 事件</li>
+<li>其间的事件订阅关系<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">&lt;Button x:<span class="hljs-attribute">Name</span>=<span class="hljs-string">&quot;Button1&quot;</span> <span class="hljs-attribute">Content</span>=<span class="hljs-string">&quot;Click Me!&quot;</span> <span class="hljs-attribute">Width</span>=<span class="hljs-string">&quot;200&quot;</span> <span class="hljs-attribute">Height</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attribute">Click</span>=<span class="hljs-string">&quot;Button_Click&quot;</span> /&gt;<br><span class="hljs-comment"># Click属性为事件处理器 方法的命名一般是Pascal法</span><br></code></pre></td></tr></table></figure>
+<h4 id="3-2-导入程序集和引用其中的名称空间"><a href="#3-2-导入程序集和引用其中的名称空间" class="headerlink" title="3.2 导入程序集和引用其中的名称空间"></a>3.2 导入程序集和引用其中的名称空间</h4><blockquote>
+<p>模块化程序设计 - User Control - 项目组件 </p>
+</blockquote>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs perl">&lt;Window xmlns:<span class="hljs-keyword">uc</span>=<span class="hljs-string">&quot;clr-namespace:RPARobot.UserControls&quot;</span>&gt;<br><br>&lt;<span class="hljs-keyword">uc</span>:....&gt;<br><span class="hljs-comment">#要先add Reference 才可以使用</span><br><br></code></pre></td></tr></table></figure>
+<h4 id="3-3-XAML的注释"><a href="#3-3-XAML的注释" class="headerlink" title="3.3 XAML的注释"></a>3.3 XAML的注释</h4>选中需要注释的内容，有个注释按钮。<br>其注释方法与HTML是一样的。<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- XXX --&gt;</span><br>#注释之间不可嵌套<br>#快捷键是：crtl+e+c;crtl+e+u;crtl+k+c;crtl+k+u;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Lesson-4"><a href="#Lesson-4" class="headerlink" title="Lesson 4"></a>Lesson 4</h3><h4 id="4-1-x名称空间的由来和作用"><a href="#4-1-x名称空间的由来和作用" class="headerlink" title="4.1 x名称空间的由来和作用"></a>4.1 x名称空间的由来和作用</h4><p>xmlns：xml语言的namespace<br>x名空间专门用于映射：<br><code>http://schemas.microsoft.com/winfx/2006/xaml</code><br>该类专门用于解析并分析<code>.xaml</code>代码的。</p>
+<h4 id="4-2-x名称空间里都有什么"><a href="#4-2-x名称空间里都有什么" class="headerlink" title="4.2 x名称空间里都有什么"></a>4.2 x名称空间里都有什么</h4><p>详情见书。</p>
+<h4 id="4-3-x-Class"><a href="#4-3-x-Class" class="headerlink" title="4.3 x:Class"></a>4.3 x:Class</h4><p>x:Class里的类就是最后要进行合并的类。<br>IntializeComponent();这个方法是由.xaml里生成的。</p>
+<h4 id="4-4-x-ClassModifier"><a href="#4-4-x-ClassModifier" class="headerlink" title="4.4 x:ClassModifier"></a>4.4 x:ClassModifier</h4><blockquote>
+<p>ClassModifier：类修饰符 默认为Public</p>
+</blockquote>
+<h4 id="4-5-x-Name"><a href="#4-5-x-Name" class="headerlink" title="4.5 x:Name"></a>4.5 x:Name</h4><blockquote>
+<p>.xaml见到一个标签会创建一个实例，不是变量</p>
+</blockquote>
+<p>x:name相当于给了一个变量引用这个实例，后台可以直接引用这个变量。</p>
+<p>当一个控件有Name属性时，使用起来x:name等于name。</p>
+<h4 id="4-6-x-FieldModifier"><a href="#4-6-x-FieldModifier" class="headerlink" title="4.6 x:FieldModifier"></a>4.6 x:FieldModifier</h4><blockquote>
+<p>控制类字段的访问级别</p>
+</blockquote>
+<h2 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h2><blockquote>
+<p>MVVM入门与提高</p>
+</blockquote>
+<h3 id="5-1-基本常识"><a href="#5-1-基本常识" class="headerlink" title="5.1 基本常识"></a>5.1 基本常识</h3><h4 id="5-1-1-开发环境"><a href="#5-1-1-开发环境" class="headerlink" title="5.1.1 开发环境"></a>5.1.1 开发环境</h4><ul>
+<li>Visual Studio</li>
+<li>Microsoft Prism</li>
+<li>Microsoft Blend SDK</li>
+</ul>
+<h4 id="5-1-2-Nuget-Package-Manager-安装"><a href="#5-1-2-Nuget-Package-Manager-安装" class="headerlink" title="5.1.2 Nuget Package Manager 安装"></a>5.1.2 Nuget Package Manager 安装</h4><p>无需安装 Visual Studio 已经集成。</p>
+<h4 id="5-1-3-必备知识的准备"><a href="#5-1-3-必备知识的准备" class="headerlink" title="5.1.3 必备知识的准备"></a>5.1.3 必备知识的准备</h4><ul>
+<li><p>Data Binding</p>
+</li>
+<li><p>Dependency Property</p>
+</li>
+<li><p>Dependency Object</p>
+</li>
+<li><p>了解WPF中的命令</p>
+<blockquote>
+<p>委托式命令</p>
+</blockquote>
+</li>
+<li><p>Lambda表达式</p>
+</li>
+</ul>
+<h4 id="5-1-4-Code-Snippet"><a href="#5-1-4-Code-Snippet" class="headerlink" title="5.1.4 Code Snippet"></a>5.1.4 Code Snippet</h4><blockquote>
+<p>代码模板</p>
+</blockquote>
+<p><strong>使用/创建</strong></p>
+<h3 id="5-2-MVVM设计模式详解"><a href="#5-2-MVVM设计模式详解" class="headerlink" title="5.2 MVVM设计模式详解"></a>5.2 MVVM设计模式详解</h3><blockquote>
+<p>MVVM = Model + View + ViewModel</p>
+</blockquote>
+<p><em>View 和 ViewModel 的解耦</em></p>
+<h4 id="5-2-1-基础概念"><a href="#5-2-1-基础概念" class="headerlink" title="5.2.1 基础概念"></a>5.2.1 基础概念</h4><ul>
+<li>Model： 现实世界中对象的抽象结果</li>
+<li>View = UI</li>
+<li>ViewModel = Model for View</li>
+<li>ViewModel与View的沟通<ul>
+<li>传递数据 – 数据属性</li>
+<li>传递操作 – 命令属性<blockquote>
+<p>模块化技术 依赖注入技术 – 更高阶内容</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>View做操作 ViewModel响应操作</em></p>
+<p><em>ViewModel是桥梁的作用？</em></p>
+<p><em>MVVM适合去写企业级程序</em></p>
+<h3 id="5-3-案例讲解"><a href="#5-3-案例讲解" class="headerlink" title="5.3 案例讲解"></a>5.3 案例讲解</h3><blockquote>
+<p>预备知识：Binding+Command</p>
+</blockquote>
+<h4 id="5-3-1-小程序"><a href="#5-3-1-小程序" class="headerlink" title="5.3.1 小程序"></a>5.3.1 小程序</h4><blockquote>
+<p><code>crtl+.</code>可以自动添加类库 <br>界面一动；后台就动；如何更新？</p>
+</blockquote>
+<ul>
+<li>重要类库：NotificationObject</li>
+<li>重要类库：DelegateCommand</li>
+<li>View和ViewModel交互</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/C/">C#</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/14/MarkdownUsage/">
+                        <span class="hidden-mobile">Markdown用法集合</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
