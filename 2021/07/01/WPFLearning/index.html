@@ -18,7 +18,7 @@
   <meta name="author" content="Yui">
   <meta name="keywords" content="">
   
-  <title>WPF学习 - Yui&#39;s Blog</title>
+  <title>WPF + MVVM 学习 - Yui&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -164,7 +164,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="WPF学习">
+            <span class="h2" id="subtitle" title="WPF + MVVM 学习">
               
             </span>
 
@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.5k 字
     </span>
   
 
@@ -196,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16
+      18
        分钟
     </span>
   
@@ -226,7 +226,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">WPF学习</h1>
+            <h1 style="display: none">WPF + MVVM 学习</h1>
             
             <div class="markdown-body">
               <h1 id="WPF学习"><a href="#WPF学习" class="headerlink" title="WPF学习"></a>WPF学习</h1><blockquote>
@@ -235,7 +235,7 @@
 <blockquote>
 <p>学习教材：《深入浅出WPF》</p>
 </blockquote>
-<h2 id="剖析简单的WPF程序"><a href="#剖析简单的WPF程序" class="headerlink" title="剖析简单的WPF程序"></a>剖析简单的WPF程序</h2><h3 id="0-预备知识"><a href="#0-预备知识" class="headerlink" title="0 预备知识"></a>0 预备知识</h3><ul>
+<h3 id="0-预备知识"><a href="#0-预备知识" class="headerlink" title="0 预备知识"></a>0 预备知识</h3><ul>
 <li>什么是WPF<br>三层结构：<code>（数据层-&gt;业务逻辑层-&gt;表示层）</code></li>
 <li>什么是XAML<br>是WPF技术中专门用于设计UI的语言。<br>实现了UI与逻辑分离。<br>是一种单纯的声明型语言，无法加入程序逻辑，与逻辑相关的代码统统集中在程序逻辑层<ul>
 <li>“高内聚-低耦合”</li>
@@ -253,15 +253,15 @@
 </li>
 <li>Canvas可以进行拖拽式界面设计</li>
 </ul>
-<h3 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h3><h3 id="1-1-解析-xaml和-cs文件"><a href="#1-1-解析-xaml和-cs文件" class="headerlink" title="1.1 解析.xaml和.cs文件"></a>1.1 解析.xaml和.cs文件</h3><ul>
+<h3 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h3><h4 id="1-1-解析-xaml和-cs文件"><a href="#1-1-解析-xaml和-cs文件" class="headerlink" title="1.1 解析.xaml和.cs文件"></a>1.1 解析.xaml和.cs文件</h4><ul>
 <li><code>partial</code>关键字：分部类，类可以分开在两个地方写，编译时会进行合并（也就是将<code>.xaml</code>和<code>.cs</code>合并在一个类里）</li>
 </ul>
-<h3 id="1-2-浅析用户界面的树形结构"><a href="#1-2-浅析用户界面的树形结构" class="headerlink" title="1.2 浅析用户界面的树形结构"></a>1.2 浅析用户界面的树形结构</h3><ul>
+<h4 id="1-2-浅析用户界面的树形结构"><a href="#1-2-浅析用户界面的树形结构" class="headerlink" title="1.2 浅析用户界面的树形结构"></a>1.2 浅析用户界面的树形结构</h4><ul>
 <li>Dos用户界面 - 文字用户界面</li>
 <li>GUI - 图形用户界面 - 友好的用户界面</li>
 </ul>
 <p>WPF制作的用户界面是树形结构。Visual C++、Delphi、VB都是平面结构的。</p>
-<h3 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h3><h4 id="在-xaml中为对象属性赋值"><a href="#在-xaml中为对象属性赋值" class="headerlink" title="在.xaml中为对象属性赋值"></a>在<code>.xaml</code>中为对象属性赋值</h4><p>对象的数据存储方式有：字段+属性；属性在对外暴露的场景里更加安全，当遇到脏数据时，可以使用set方法对脏数据进行过滤。</p>
+<h3 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h3><h5 id="在-xaml中为对象属性赋值"><a href="#在-xaml中为对象属性赋值" class="headerlink" title="在.xaml中为对象属性赋值"></a>在<code>.xaml</code>中为对象属性赋值</h5><p>对象的数据存储方式有：字段+属性；属性在对外暴露的场景里更加安全，当遇到脏数据时，可以使用set方法对脏数据进行过滤。</p>
 <h6 id="方法一：使用Attribute进行赋值"><a href="#方法一：使用Attribute进行赋值" class="headerlink" title="方法一：使用Attribute进行赋值"></a>方法一：使用Attribute进行赋值</h6><p>这种方法为三种之中最简单的，也很方便。<br>缺陷：只能使用简单的字符串赋值，没有办法赋非常复杂的值。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">Grid</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">Path</span> <span class="hljs-attr">Data</span>=<span class="hljs-string">&quot;M 0,0 L 200,100 L 100,200 Z&quot;</span> <span class="hljs-attr">Stroke</span>=<span class="hljs-string">&quot;Black&quot;</span> <span class="hljs-attr">Fill</span>=<span class="hljs-string">&quot;Red&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">Grid</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>使用TypeConverter类进行映射（在MVVM中有自带的）</p>
@@ -306,16 +306,16 @@
 <h4 id="4-6-x-FieldModifier"><a href="#4-6-x-FieldModifier" class="headerlink" title="4.6 x:FieldModifier"></a>4.6 x:FieldModifier</h4><blockquote>
 <p>控制类字段的访问级别</p>
 </blockquote>
-<h2 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h2><blockquote>
+<h3 id="Lesson-5"><a href="#Lesson-5" class="headerlink" title="Lesson 5"></a>Lesson 5</h3><blockquote>
 <p>MVVM入门与提高</p>
 </blockquote>
-<h3 id="5-1-基本常识"><a href="#5-1-基本常识" class="headerlink" title="5.1 基本常识"></a>5.1 基本常识</h3><h4 id="5-1-1-开发环境"><a href="#5-1-1-开发环境" class="headerlink" title="5.1.1 开发环境"></a>5.1.1 开发环境</h4><ul>
+<h4 id="5-1-基本常识"><a href="#5-1-基本常识" class="headerlink" title="5.1 基本常识"></a>5.1 基本常识</h4><h5 id="5-1-1-开发环境"><a href="#5-1-1-开发环境" class="headerlink" title="5.1.1 开发环境"></a>5.1.1 开发环境</h5><ul>
 <li>Visual Studio</li>
 <li>Microsoft Prism</li>
 <li>Microsoft Blend SDK</li>
 </ul>
-<h4 id="5-1-2-Nuget-Package-Manager-安装"><a href="#5-1-2-Nuget-Package-Manager-安装" class="headerlink" title="5.1.2 Nuget Package Manager 安装"></a>5.1.2 Nuget Package Manager 安装</h4><p>无需安装 Visual Studio 已经集成。</p>
-<h4 id="5-1-3-必备知识的准备"><a href="#5-1-3-必备知识的准备" class="headerlink" title="5.1.3 必备知识的准备"></a>5.1.3 必备知识的准备</h4><ul>
+<h5 id="5-1-2-Nuget-Package-Manager-安装"><a href="#5-1-2-Nuget-Package-Manager-安装" class="headerlink" title="5.1.2 Nuget Package Manager 安装"></a>5.1.2 Nuget Package Manager 安装</h5><p>无需安装 Visual Studio 已经集成。</p>
+<h5 id="5-1-3-必备知识的准备"><a href="#5-1-3-必备知识的准备" class="headerlink" title="5.1.3 必备知识的准备"></a>5.1.3 必备知识的准备</h5><ul>
 <li><p>Data Binding</p>
 </li>
 <li><p>Dependency Property</p>
@@ -330,15 +330,15 @@
 <li><p>Lambda表达式</p>
 </li>
 </ul>
-<h4 id="5-1-4-Code-Snippet"><a href="#5-1-4-Code-Snippet" class="headerlink" title="5.1.4 Code Snippet"></a>5.1.4 Code Snippet</h4><blockquote>
+<h5 id="5-1-4-Code-Snippet"><a href="#5-1-4-Code-Snippet" class="headerlink" title="5.1.4 Code Snippet"></a>5.1.4 Code Snippet</h5><blockquote>
 <p>代码模板</p>
 </blockquote>
 <p><strong>使用/创建</strong></p>
-<h3 id="5-2-MVVM设计模式详解"><a href="#5-2-MVVM设计模式详解" class="headerlink" title="5.2 MVVM设计模式详解"></a>5.2 MVVM设计模式详解</h3><blockquote>
+<h4 id="5-2-MVVM设计模式详解"><a href="#5-2-MVVM设计模式详解" class="headerlink" title="5.2 MVVM设计模式详解"></a>5.2 MVVM设计模式详解</h4><blockquote>
 <p>MVVM = Model + View + ViewModel</p>
 </blockquote>
 <p><em>View 和 ViewModel 的解耦</em></p>
-<h4 id="5-2-1-基础概念"><a href="#5-2-1-基础概念" class="headerlink" title="5.2.1 基础概念"></a>5.2.1 基础概念</h4><ul>
+<h5 id="5-2-1-基础概念"><a href="#5-2-1-基础概念" class="headerlink" title="5.2.1 基础概念"></a>5.2.1 基础概念</h5><ul>
 <li>Model： 现实世界中对象的抽象结果</li>
 <li>View = UI</li>
 <li>ViewModel = Model for View</li>
@@ -354,10 +354,10 @@
 <p><em>View做操作 ViewModel响应操作</em></p>
 <p><em>ViewModel是桥梁的作用？</em></p>
 <p><em>MVVM适合去写企业级程序</em></p>
-<h3 id="5-3-案例讲解"><a href="#5-3-案例讲解" class="headerlink" title="5.3 案例讲解"></a>5.3 案例讲解</h3><blockquote>
+<h4 id="5-3-案例讲解"><a href="#5-3-案例讲解" class="headerlink" title="5.3 案例讲解"></a>5.3 案例讲解</h4><blockquote>
 <p>预备知识：Binding+Command</p>
 </blockquote>
-<h4 id="5-3-1-小程序"><a href="#5-3-1-小程序" class="headerlink" title="5.3.1 小程序"></a>5.3.1 小程序</h4><blockquote>
+<h5 id="5-3-1-小程序"><a href="#5-3-1-小程序" class="headerlink" title="5.3.1 小程序"></a>5.3.1 小程序</h5><blockquote>
 <p><code>crtl+.</code>可以自动添加类库 <br>界面一动；后台就动；如何更新？</p>
 </blockquote>
 <ul>
@@ -365,6 +365,13 @@
 <li>重要类库：DelegateCommand</li>
 <li>View和ViewModel交互</li>
 </ul>
+<h1 id="一些小知识"><a href="#一些小知识" class="headerlink" title="一些小知识"></a>一些小知识</h1><blockquote>
+<p>学习文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/">C#官方文档</a></p>
+</blockquote>
+<h3 id="0-基础知识"><a href="#0-基础知识" class="headerlink" title="0 基础知识"></a>0 基础知识</h3><h5 id="运算符"><a href="#运算符" class="headerlink" title="??运算符"></a>??运算符</h5><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-string">??</span>  <span class="hljs-comment">#双问号运算符 </span><br></code></pre></td></tr></table></figure>
+<p>提供了一种快捷方式，可以在处理可空类型和引用类型时表示null值的可能性，这个运算符放在两个操作数之间。<br>第一个操作数必须是一个可空类型或者引用类型，第二个操作数必须与第一个操作数类型相同，或者可以隐式转换为第一个操作数的类型。<br> 1、如果第一个操作数不是null，整个表达式就等于第一个操作数的值；<br>2、如果第一个操作数是null， 整个表达式就等于第二个操作数的值<br>例子如下：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">int</span>? a = <span class="hljs-keyword">null</span>;<br><span class="hljs-keyword">int</span> b;<br>b = a ?? <span class="hljs-number">10</span>;<br>a = <span class="hljs-number">3</span>;<br>Console.<span class="hljs-keyword">WriteLine</span>(b); <span class="hljs-comment">// 10</span><br></code></pre></td></tr></table></figure>
+<h5 id="gt-运算符"><a href="#gt-运算符" class="headerlink" title="=&gt;运算符"></a>=&gt;运算符</h5><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/lambda-expressions">lambda表达式</a></p>
 
             </div>
             <hr>
