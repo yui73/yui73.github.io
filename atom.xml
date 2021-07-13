@@ -6,7 +6,7 @@
   <link href="https://yui73.github.io/atom.xml" rel="self"/>
   
   <link href="https://yui73.github.io/"/>
-  <updated>2021-07-12T08:31:44.123Z</updated>
+  <updated>2021-07-13T03:48:56.918Z</updated>
   <id>https://yui73.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub用法集合</title>
+    <link href="https://yui73.github.io/2021/07/13/GitHubUsage/"/>
+    <id>https://yui73.github.io/2021/07/13/GitHubUsage/</id>
+    <published>2021-07-13T18:39:00.000Z</published>
+    <updated>2021-07-13T03:48:56.918Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="GitHub-用法集合"><a href="#GitHub-用法集合" class="headerlink" title="GitHub 用法集合"></a>GitHub 用法集合</h1><blockquote><p>对GitHub一些常规操作做一些记录，关联电脑与GituHub，生成SSH密钥，已经在之前建站中完成了。</p></blockquote><h3 id="1-验证是否连接成功"><a href="#1-验证是否连接成功" class="headerlink" title="1 验证是否连接成功"></a>1 验证是否连接成功</h3><p>输入：</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-variable">$ </span>ssh -T git<span class="hljs-variable">@github</span>.com<br></code></pre></td></tr></table></figure><p>出现<code>Hi yui73! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>表示成功连接。</p><h3 id="2-上传Code"><a href="#2-上传Code" class="headerlink" title="2 上传Code"></a>2 上传Code</h3><ul><li>cd到目标文件夹内</li><li>输入以下指令</li></ul><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp">git <span class="hljs-keyword">init</span><br>git <span class="hljs-keyword">add</span><br>git commit -m <span class="hljs-string">&quot;Commit 备注&quot;</span><br>git remote <span class="hljs-keyword">add</span> origin git@github.com:... <span class="hljs-comment">//你仓库的SSH地址</span><br>git push -u origin master<br></code></pre></td></tr></table></figure><h3 id="3-GitHub大文件限制"><a href="#3-GitHub大文件限制" class="headerlink" title="3 GitHub大文件限制"></a>3 GitHub大文件限制</h3><h4 id="3-1-报错形式"><a href="#3-1-报错形式" class="headerlink" title="3.1 报错形式"></a>3.1 报错形式</h4><p><img src="/2021/07/13/GitHubUsage/error.PNG" alt="Error"></p><h4 id="3-2-解决方法-Git-lfs"><a href="#3-2-解决方法-Git-lfs" class="headerlink" title="3.2 解决方法 Git-lfs"></a>3.2 解决方法 Git-lfs</h4><ul><li>去<a href="https://git-lfs.github.com/">官网</a>下载安装Git-lfs</li><li>重启Cygwim</li><li>输入<code>ssh -T git@github.com</code></li><li>cd到目标文件夹</li><li>输入<code>git lfs install</code><br><img src="/2021/07/13/GitHubUsage/lfs-install.png" alt="lfs-install"></li><li>Track你的大文件<br><img src="/2021/07/13/GitHubUsage/track.png" alt="Track"></li><li>重新<code>add commit push</code></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;GitHub-用法集合&quot;&gt;&lt;a href=&quot;#GitHub-用法集合&quot; class=&quot;headerlink&quot; title=&quot;GitHub 用法集合&quot;&gt;&lt;/a&gt;GitHub 用法集合&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;对GitHub一些常规操作做一些记录，关联</summary>
+      
+    
+    
+    
+    
+    <category term="Blog" scheme="https://yui73.github.io/tags/Blog/"/>
+    
+  </entry>
   
   <entry>
     <title>WPF + MVVM 学习</title>
