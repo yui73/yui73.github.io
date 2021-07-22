@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.6k 字
+      1.7k 字
     </span>
   
 
@@ -196,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24
+      25
        分钟
     </span>
   
@@ -289,6 +289,11 @@
 </blockquote>
 <h5 id="4-4-1-安装插件"><a href="#4-4-1-安装插件" class="headerlink" title="4.4.1 安装插件"></a>4.4.1 安装插件</h5><p>输入</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">$ npm install <span class="hljs-comment">--save hexo-helper-live2d</span><br></code></pre></td></tr></table></figure>
+<h5 id="4-4-2-修改配置"><a href="#4-4-2-修改配置" class="headerlink" title="4.4.2 修改配置"></a>4.4.2 修改配置</h5><p>配置_config.yml文件（我一般都配根目录下面那个）</p>
+<h3 id="4-5-插入pdf"><a href="#4-5-插入pdf" class="headerlink" title="4.5 插入pdf"></a>4.5 插入pdf</h3><p>先安装</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">$ npm install <span class="hljs-comment">--save hexo-pdf</span><br></code></pre></td></tr></table></figure>
+<p>在markdown对应的文件夹中存放你的pdf,输入：</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">&#123;<span class="hljs-meta">%</span> pdf ./Pris<span class="hljs-name">m5</span>forWPF.pdf <span class="hljs-meta">%</span>&#125;<br></code></pre></td></tr></table></figure>
 
 
 <h2 id="5-一些问题"><a href="#5-一些问题" class="headerlink" title="5 一些问题"></a>5 一些问题</h2><h3 id="5-1-图片加载不出来"><a href="#5-1-图片加载不出来" class="headerlink" title="5.1 图片加载不出来"></a>5.1 图片加载不出来</h3><h5 id="5-1-1-注意图片是-png还是-PNG，在本地测试无关，在Github上区分大小写。"><a href="#5-1-1-注意图片是-png还是-PNG，在本地测试无关，在Github上区分大小写。" class="headerlink" title="5.1.1 注意图片是.png还是.PNG，在本地测试无关，在Github上区分大小写。"></a>5.1.1 注意图片是<code>.png</code>还是<code>.PNG</code>，在本地测试无关，在Github上区分大小写。</h5><h5 id="5-1-2-直接找html文件看路径是否正确，路径可能不支持中文。"><a href="#5-1-2-直接找html文件看路径是否正确，路径可能不支持中文。" class="headerlink" title="5.1.2 直接找html文件看路径是否正确，路径可能不支持中文。"></a>5.1.2 直接找<code>html</code>文件看路径是否正确，路径可能不支持中文。</h5><h3 id="5-2-hexo-g-时的报错"><a href="#5-2-hexo-g-时的报错" class="headerlink" title="5.2 hexo g 时的报错"></a>5.2 hexo g 时的报错</h3><p>报错内容如下：</p>
