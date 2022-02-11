@@ -18,9 +18,25 @@
   <meta name="author" content="Yui">
   <meta name="keywords" content="">
   
-  <title>归档 - Yui&#39;s Blog</title>
+  <title>Ant Design Pro 学习 - Yui&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -49,7 +65,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -148,9 +164,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="Ant Design Pro 学习">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-02-10 14:14" pubdate>
+        2022年2月10日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      117 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      1
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -163,52 +216,106 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 13 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2022</p>
-    
-    <a href="/2022/02/10/WindowCommand/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Windows命令集合</span>
-      <time style="float: right;">02-10</time>
-    </a>
-  
-    
-    <a href="/2022/02/10/AntDesignProLearning/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Ant Design Pro 学习</span>
-      <time style="float: right;">02-10</time>
-    </a>
-  
-    
-    <a href="/2022/02/08/LittleDiscovery_20220208/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">玩游戏时的小发现</span>
-      <time style="float: right;">02-08</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Ant Design Pro 学习</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Ant-Design-Pro-学习"><a href="#Ant-Design-Pro-学习" class="headerlink" title="Ant Design Pro 学习"></a>Ant Design Pro 学习</h1><blockquote>
+<p>文档：<a target="_blank" rel="noopener" href="https://pro.ant.design/zh-CN/docs/overview">Ant Design Pro文档</a></p>
+</blockquote>
+<h2 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0 准备工作"></a>0 准备工作</h2><h3 id="推荐技术栈"><a href="#推荐技术栈" class="headerlink" title="推荐技术栈"></a>推荐技术栈</h3><ul>
+<li>包管理：tyarn 安装<code>npm install yarn tyarn -g</code><br>文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/tyarn">tyarn</a></li>
+<li>Terminal：选择Windows Terminal</li>
+</ul>
+<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><ul>
+<li><p>初始化脚手架</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta">#使用yarn</span><br>yarn <span class="hljs-keyword">create</span> umi app<br></code></pre></td></tr></table></figure></li>
+<li><p>遇到的问题<br><img src="/2022/02/10/AntDesignProLearning/yarnError.png" srcset="/img/loading.gif" lazyload alt="yarnError"></p>
+</li>
+<li><p>解决方案：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7">官方解释</a><br><br>因此修改一下powershell的保护机制即可解决。使用<code>set-executionpolicy remotesigned</code>的命令。效果如下：<br><img src="/2022/02/10/AntDesignProLearning/yarnErrorSolution.png" srcset="/img/loading.gif" lazyload alt="yarnErrorSolution"></p>
+<p>再次安装，效果如下，成功安装：<br><img src="/2022/02/10/AntDesignProLearning/yarnSuccess.png" srcset="/img/loading.gif" lazyload alt="yarnSuccess"></p>
+</li>
+</ul>
+<blockquote>
+<p>待更新 &gt; v &lt;</p>
+</blockquote>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Front-Interface/">Front/Interface</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/02/10/WindowCommand/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows命令集合</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/08/LittleDiscovery_20220208/">
+                        <span class="hidden-mobile">玩游戏时的小发现</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -288,9 +395,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
