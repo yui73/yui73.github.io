@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      117 字
+      270 字
     </span>
   
 
@@ -196,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -244,6 +244,13 @@
 <li><p>解决方案：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7">官方解释</a><br><br>因此修改一下powershell的保护机制即可解决。使用<code>set-executionpolicy remotesigned</code>的命令。效果如下：<br><img src="/2022/02/10/AntDesignProLearning/yarnErrorSolution.png" srcset="/img/loading.gif" lazyload alt="yarnErrorSolution"></p>
 <p>再次安装，效果如下，成功安装：<br><img src="/2022/02/10/AntDesignProLearning/yarnSuccess.png" srcset="/img/loading.gif" lazyload alt="yarnSuccess"></p>
 </li>
+</ul>
+<h2 id="1-基础结构"><a href="#1-基础结构" class="headerlink" title="1 基础结构"></a>1 基础结构</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs csharp">├── config                   <span class="hljs-meta"># umi 配置，包含路由，构建等配置</span><br>├── mock                     <span class="hljs-meta"># 本地模拟数据</span><br>├── <span class="hljs-keyword">public</span><br>│   └── favicon.png          <span class="hljs-meta"># Favicon</span><br>├── src<br>│   ├── assets               <span class="hljs-meta"># 本地静态资源</span><br>│   ├── components           <span class="hljs-meta"># 业务通用组件</span><br>│   ├── e2e                  <span class="hljs-meta"># 集成测试用例</span><br>│   ├── layouts              <span class="hljs-meta"># 通用布局</span><br>│   ├── models               <span class="hljs-meta"># 全局 dva model</span><br>│   ├── pages                <span class="hljs-meta"># 业务页面入口和常用模板</span><br>│   ├── services             <span class="hljs-meta"># 后台接口服务</span><br>│   ├── utils                <span class="hljs-meta"># 工具库</span><br>│   ├── locales              <span class="hljs-meta"># 国际化资源</span><br>│   ├── <span class="hljs-keyword">global</span>.less          <span class="hljs-meta"># 全局样式</span><br>│   └── <span class="hljs-keyword">global</span>.ts            <span class="hljs-meta"># 全局 JS</span><br>├── tests                    <span class="hljs-meta"># 测试工具</span><br>├── README.md<br>└── package.json<br></code></pre></td></tr></table></figure>
+
+<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><h4 id="页面开发使用图表"><a href="#页面开发使用图表" class="headerlink" title="页面开发使用图表"></a>页面开发使用图表</h4><p>使用Ant Design的图表：<code>yarn add @ant-design/charts</code></p>
+<h3 id="一些报错"><a href="#一些报错" class="headerlink" title="一些报错"></a>一些报错</h3><h4 id="1-网页控制台"><a href="#1-网页控制台" class="headerlink" title="1 网页控制台"></a>1 网页控制台</h4><p><img src="/2022/02/10/AntDesignProLearning/React.png" srcset="/img/loading.gif" lazyload alt="ReactError"></p>
+<ul>
+<li>解决方案</li>
 </ul>
 <blockquote>
 <p>待更新 &gt; v &lt;</p>
