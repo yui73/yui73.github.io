@@ -186,7 +186,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.5k 字
     </span>
   
 
@@ -236,7 +236,10 @@
 <li>静态阶段<br>后端使用MVC模式，前端静态网页</li>
 <li>Ajax阶段</li>
 <li>前端MVC阶段<br>后来还有人提出了MVVM模式，使用ViewModel代替Controller</li>
-<li>SPA阶段<br>网页前端变为一个应用程序，单网页应用程序称为SPA <code>single-page-application</code>,跑在浏览器里的应用程序。<br>当前的Vue,Angular,React都属于SPA开发框架。<h3 id="ii-ReactJS什么"><a href="#ii-ReactJS什么" class="headerlink" title="ii ReactJS什么"></a>ii ReactJS什么</h3>React是一个用户构建用户界面的JavaScript框架。</li>
+<li>SPA阶段<br>网页前端变为一个应用程序，单网页应用程序称为SPA <code>single-page-application</code>,跑在浏览器里的应用程序。<br>当前的Vue,Angular,React都属于SPA开发框架。</li>
+</ul>
+<h3 id="ii-ReactJS什么"><a href="#ii-ReactJS什么" class="headerlink" title="ii ReactJS什么"></a>ii ReactJS什么</h3><p>React是一个用户构建用户界面的JavaScript框架。</p>
+<ul>
 <li>Flux: Flux补充了React的组合视图组件，它更是一种模式，非框架</li>
 <li>Redux: Redux是JavaScript状态容器，使React组件状态共享变得简单。</li>
 <li>Ant Design of React<br>集成了多种框架，包含了Flux、Redux；提供了丰富组件。</li>
@@ -254,8 +257,11 @@
 <li>IntelliJ创建web项目的方法：先创建Java空项目，然后再add framework support，选择web application。</li>
 <li>使用命令<code>tyarn init -y</code>进行初始化。生成一个<code>package.json</code>文件</li>
 <li>使用命令<code>tyarn add umi --dev</code>添加Umi脚手架的依赖，增加了一个<code>node_modules</code>的一个文件夹，里面是各种各样的依赖。</li>
-<li>Umi约定的目录结构<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus">.<br>├── package<span class="hljs-selector-class">.json</span><br>├── <span class="hljs-selector-class">.umirc</span><span class="hljs-selector-class">.ts</span><br>├── <span class="hljs-selector-class">.env</span><br>├── dist<br>├── mock<br>├── public<br>└── <span class="hljs-attribute">src</span><br>    ├── <span class="hljs-selector-class">.umi</span><br>    ├── layouts/index<span class="hljs-selector-class">.tsx</span><br>    ├── pages<br>        ├── index<span class="hljs-selector-class">.less</span><br>        └── index<span class="hljs-selector-class">.tsx</span><br>    └── app.ts<br></code></pre></td></tr></table></figure>
-<h3 id="1-2-Hello-World"><a href="#1-2-Hello-World" class="headerlink" title="1.2 Hello World!"></a>1.2 Hello World!</h3></li>
+<li>Umi约定的目录结构</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus">.<br>├── package<span class="hljs-selector-class">.json</span><br>├── <span class="hljs-selector-class">.umirc</span><span class="hljs-selector-class">.ts</span><br>├── <span class="hljs-selector-class">.env</span><br>├── dist<br>├── mock<br>├── public<br>└── <span class="hljs-attribute">src</span><br>    ├── <span class="hljs-selector-class">.umi</span><br>    ├── layouts/index<span class="hljs-selector-class">.tsx</span><br>    ├── pages<br>        ├── index<span class="hljs-selector-class">.less</span><br>        └── index<span class="hljs-selector-class">.tsx</span><br>    └── app.ts<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-2-Hello-World"><a href="#1-2-Hello-World" class="headerlink" title="1.2 Hello World!"></a>1.2 Hello World!</h3><ul>
 <li>创建config目录，在该目录下创建config.js文件(Umi的全局配置文件)<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//导出一个对象，暂时设置为空对象</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;&#125;;<br></code></pre></td></tr></table></figure></li>
 <li>创建pages目录，在pages目录下创建HelloWorld.js文件，输入<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//在js文件中写html代码叫做JSX,React自创的</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt;&#123;<br>  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  &#125;<br></code></pre></td></tr></table></figure></li>
 <li>使用<code>umi dev</code>命令运行工程</li>
@@ -293,12 +299,11 @@
 <li>构造函数必须要有<code>props</code>参数</li>
 <li>map函数：返回一个数组 / 不检测空数组 / 不检测原始数组</li>
 <li>箭头函数<code>()=&gt;&#123;...&#125;</code>：无构造函数/this/arguments/super/new</li>
-<li>super函数：调用父类/父对象的…<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">super</span><span class="hljs-params">([arguments])</span></span>:调用父类/父对象的构造函数<br>super<span class="hljs-selector-class">.functionOnParent</span>(<span class="hljs-selector-attr">[arguments]</span>):调用父类/父对象的方法<br></code></pre></td></tr></table></figure>
+<li>super函数：调用父类/父对象的…<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">super</span><span class="hljs-params">([arguments])</span></span>:调用父类/父对象的构造函数<br>super<span class="hljs-selector-class">.functionOnParent</span>(<span class="hljs-selector-attr">[arguments]</span>):调用父类/父对象的方法<br></code></pre></td></tr></table></figure></li>
+</ul>
 <h3 id="2-3-ReactJS-Model层"><a href="#2-3-ReactJS-Model层" class="headerlink" title="2.3 ReactJS-Model层"></a>2.3 ReactJS-Model层</h3><blockquote>
 <p>与数据相关</p>
 </blockquote>
-</li>
-</ul>
 <h4 id="2-3-1-一些概念"><a href="#2-3-1-一些概念" class="headerlink" title="2.3.1 一些概念"></a>2.3.1 一些概念</h4><p><strong>前端</strong></p>
 <ul>
 <li>Page层：与用户打交道，渲染页面</li>
