@@ -582,6 +582,11 @@
   "resolved" "https://registry.npmmirror.com/command-exists/-/command-exists-1.2.9.tgz"
   "version" "1.2.9"
 
+"commander@^2.19.0":
+  "integrity" "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="
+  "resolved" "https://registry.npmmirror.com/commander/-/commander-2.20.3.tgz"
+  "version" "2.20.3"
+
 "commander@^3.0.2":
   "integrity" "sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow=="
   "resolved" "https://registry.npmmirror.com/commander/-/commander-3.0.2.tgz"
@@ -1483,6 +1488,15 @@
   dependencies:
     "picocolors" "^1.0.0"
 
+"hexo-math@^4.0.0":
+  "integrity" "sha512-oMVa9bVXljQ8F3y0euVwOhkkiTfH3vxEV+dWT7lWbxNjtxV9MvpTG4BkDNSgM1frv+sP549FuPx39KqqEHmAgA=="
+  "resolved" "https://registry.npmmirror.com/hexo-math/-/hexo-math-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "hexo-util" "^2.2.0"
+    "katex" "^0.12.0"
+    "mathjax" "^3.0.5"
+
 "hexo-pagination@3.0.0":
   "integrity" "sha512-8oo1iozloZo7TojPVYg4IxL3SJKCBdSJ908fTlIxIK7TWJIKdYnQlW31+12DBJ0NhVZA/lZisPObGF08wT8fKw=="
   "resolved" "https://registry.npmmirror.com/hexo-pagination/-/hexo-pagination-3.0.0.tgz"
@@ -1563,7 +1577,7 @@
     "html-entities" "^1.2.0"
     "striptags" "^2.1.1"
 
-"hexo-util@^2.0.0", "hexo-util@^2.1.0", "hexo-util@^2.7.0":
+"hexo-util@^2.0.0", "hexo-util@^2.1.0", "hexo-util@^2.2.0", "hexo-util@^2.7.0":
   "integrity" "sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ=="
   "resolved" "https://registry.npmmirror.com/hexo-util/-/hexo-util-2.7.0.tgz"
   "version" "2.7.0"
@@ -2075,6 +2089,13 @@
     "jsonparse" "^1.2.0"
     "through" ">=2.2.7 <3"
 
+"katex@^0.12.0":
+  "integrity" "sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg=="
+  "resolved" "https://registry.npmmirror.com/katex/-/katex-0.12.0.tgz"
+  "version" "0.12.0"
+  dependencies:
+    "commander" "^2.19.0"
+
 "keyv@^3.0.0":
   "integrity" "sha512-9ykJ/46SN/9KPM/sichzQ7OvXyGDYKGTaDlKMGCAlg2UK8KRy4jb0d8sFc+0Tt0YYnThq8X2RZgCg74RPxgcVA=="
   "resolved" "https://registry.npmmirror.com/keyv/-/keyv-3.1.0.tgz"
@@ -2246,6 +2267,11 @@
   "version" "1.0.0"
   dependencies:
     "object-visit" "^1.0.0"
+
+"mathjax@^3.0.5":
+  "integrity" "sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw=="
+  "resolved" "https://registry.npmmirror.com/mathjax/-/mathjax-3.2.2.tgz"
+  "version" "3.2.2"
 
 "micro-memoize@^4.0.11":
   "integrity" "sha512-2tzWP1w2Hh+r7kCYa4f//jpBEA6dAueiuLco38NxfjF9Py3KCCI7wVOTdCvOhmTC043t+ulclVBdl3v+s+UJIQ=="

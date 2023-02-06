@@ -1052,7 +1052,8 @@ static_prefix:
 
   #被拦截 mathjax: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
   #出错 mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/
+  # mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/
+  mathjax: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
   katex: https://lib.baomitu.com/KaTeX/0.15.2/
 
