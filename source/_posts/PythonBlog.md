@@ -329,7 +329,7 @@ app/admin.py中
 - Pycharm Community 对Django没有support，因此需要升级成Pycharm Professional版本
 - 升级过后 开启项目设置中对django的支持(如下图)
 
-![DjangoSupport](./PythonBlog/DjangoSupport.png)
+![DjangoSupport](/imgInPosts/PythonBlog/DjangoSupport.png)
 
 - Bootstrap下拉菜单失效问题
   JS导入不全，必须按照以下顺序

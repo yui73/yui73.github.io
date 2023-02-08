@@ -43,7 +43,7 @@ git push -u origin master
 
 #### 3.1 报错形式
 
-![Error](./GitHubUsage/error.png)
+![Error](/imgInPosts/GitHubUsage/error.png)
 
 #### 3.2 解决方法 Git-lfs
 
@@ -52,9 +52,9 @@ git push -u origin master
 - 输入`ssh -T git@github.com`
 - cd到目标文件夹
 - 输入`git lfs install`
-  ![lfs-install](./GitHubUsage/lfs-install.PNG)
+  ![lfs-install](/imgInPosts/GitHubUsage/lfs-install.PNG)
 - Track你的大文件
-  ![Track](./GitHubUsage/track.PNG)
+  ![Track](/imgInPosts/GitHubUsage/track.PNG)
 - 重新`add commit push`
 
 ### 4 Git理论学习
@@ -81,7 +81,7 @@ Git工程的工作区域：
 - Local repository（本地仓库）
 - Remote repository （远程仓库）
 下图为其工作流程：
-![GitUsage](GitHubUsage/Git.png)
+![GitUsage](/imgInPosts/GitHubUsage/Git.png)
 文件的三种状态：
 - 已提交
 - 已修改

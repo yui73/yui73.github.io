@@ -76,4 +76,4 @@ int main()
 
 ```
 运行结果：
-![result.png](./LittleDiscovery_20220208/result.png)
+![result.png](/imgInPosts/LittleDiscovery_20220208/result.png)

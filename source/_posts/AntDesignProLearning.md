@@ -45,7 +45,7 @@ const formLayout = {
 
 效果如下：
 
-![Form](./AntDesignProLearning/1_Form.png)
+![Form](/imgInPosts/AntDesignProLearning/1_Form.png)
 
 ## 2 Ant Design Pro 前端学习
 
@@ -74,10 +74,10 @@ yarn create umi app
 
 - 解决方案：[官方解释](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7)
   </br>因此修改一下powershell的保护机制即可解决。使用`set-executionpolicy remotesigned`的命令。效果如下：
-  ![yarnErrorSolution](./AntDesignProLearning/yarnErrorSolution.png)
+  ![yarnErrorSolution](/imgInPosts/AntDesignProLearning/yarnErrorSolution.png)
 
   再次安装，效果如下，成功安装：
-  ![yarnSuccess](./AntDesignProLearning/yarnSuccess.png)
+  ![yarnSuccess](/imgInPosts/AntDesignProLearning/yarnSuccess.png)
 
 ### 2.2 基础结构
 
@@ -113,7 +113,7 @@ yarn create umi app
 
 ##### 网页控制台
 
-![ReactError](./AntDesignProLearning/React.png)
+![ReactError](/imgInPosts/AntDesignProLearning/React.png)
 
 - 解决方案
 

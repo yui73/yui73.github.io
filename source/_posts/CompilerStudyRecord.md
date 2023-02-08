@@ -103,7 +103,7 @@ excerpt: 好深奥的一门课。
 > 运算优先级：() &rightarrow; * &rightarrow; 连接 &rightarrow; |
 
 3. RE的代数定律
-   <br>![RE的代数定律]( ./CompilerStudyRecord/1.PNG )
+   <br>![RE的代数定律](/imgInPosts/CompilerStudyRecord/1.PNG )
 ### 3.2 正则定义
 > 给一些RE命名， 并在之后的RE中像使用字母表中的符号一样使用这些名字
 
