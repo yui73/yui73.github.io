@@ -24,13 +24,13 @@
 <meta property="og:site_name" content="Yui&#39;s Blog">
 <meta property="og:description" content="毕业设计开发记录0 项目流程 架构设计 功能模块 设计模式 项目服务器架构（Web&#x2F;数据库服务器&#x2F;负载均衡？） 数据库设计（什么数据库&#x2F;多少张表&#x2F;层次结构&#x2F;关系图&#x2F;分库？）   代码模块实现 UI页面设计&amp;交互实现（用图的方式表现） 代码规范是PEP8  1  技术难点&amp;开发环境 开发环境 Win10推荐Linux python django mysql mysql-python">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yui73.github.io/2022/05/19/PythonBlog/PythonBlog/DjangoSupport.png">
+<meta property="og:image" content="https://yui73.github.io/imgInPosts/PythonBlog/DjangoSupport.png">
 <meta property="article:published_time" content="2022-05-20T01:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-26T16:09:07.392Z">
+<meta property="article:modified_time" content="2023-02-20T14:08:08.973Z">
 <meta property="article:author" content="Yui">
 <meta property="article:tag" content="Django">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yui73.github.io/2022/05/19/PythonBlog/PythonBlog/DjangoSupport.png">
+<meta name="twitter:image" content="https://yui73.github.io/imgInPosts/PythonBlog/DjangoSupport.png">
   
   
   
@@ -574,7 +574,7 @@
 <li>Pycharm Community 对Django没有support，因此需要升级成Pycharm Professional版本</li>
 <li>升级过后 开启项目设置中对django的支持(如下图)</li>
 </ul>
-<p><img src="./PythonBlog/DjangoSupport.png" srcset="/img/loading.gif" lazyload alt="DjangoSupport"></p>
+<p><img src="/imgInPosts/PythonBlog/DjangoSupport.png" srcset="/img/loading.gif" lazyload alt="DjangoSupport"></p>
 <ul>
 <li>Bootstrap下拉菜单失效问题<br>JS导入不全，必须按照以下顺序<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- JS顺序不可变 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;% static &#x27;js/jquery-3.6.0.min.js&#x27; %&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;% static &#x27;js/bootstrap.js&#x27; %&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Bootstrap core JS--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;% static &#x27;js/bootstrap.bundle.min.js&#x27; %&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Core theme JS--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;% static &#x27;js/scripts.js&#x27; %&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
