@@ -25,11 +25,13 @@
 <meta property="og:description" content="记录了我给博客升级一系列踩坑的地方。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-08T21:33:00.000Z">
-<meta property="article:modified_time" content="2023-02-20T14:08:08.972Z">
+<meta property="article:modified_time" content="2023-02-21T12:02:18.820Z">
 <meta property="article:author" content="Yui">
 <meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>博客升级踩坑记录 - Yui&#39;s Blog</title>
@@ -70,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -80,6 +82,21 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -226,7 +243,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.9k 字
+          2.2k 字
         
       </span>
     
@@ -238,7 +255,7 @@
         
         
           <!-- compatible with older versions-->
-          16 分钟
+          19 分钟
         
       </span>
     
@@ -351,11 +368,18 @@
 <p>这就需要修改主题的模板文件，因此不太能使用npm来安装主题，需要下载主题的压缩包并解压到<code>\Hexo\themes\fluid</code>里面</p>
 <p>修改<code>\Hexo\themes\fluid\layout\_partials\head.ejs</code></p>
 <p>在head标签下添加上述内容即可。</p>
+<div class="note note-info">
+            <p>发现官方支持了直接在主题里开启强制https,在主题配置文件里开启，force_https: true 即可，目前先不改了。</p>
+          </div>
 <h3 id="2-4-渲染出错"><a href="#2-4-渲染出错" class="headerlink" title="2.4 渲染出错"></a>2.4 渲染出错</h3><p><em>本来以为问题解决了，结果一刷新就乱码，搜了好多好多好多多多博客才找到是页面懒加载的问题。</em></p>
 <p><strong>参考博客</strong>：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2067298">博客地址</a></p>
 <p>公式懒加载之后就无法再次嵌入网页中，因此需要取消对公式的懒加载。</p>
 <p>因此需要删除<code>\Hexo\themes\fluid\layout\_partials\math.ejs</code>中的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ejs">loader : &#123;<br>  $&#123; lazy ? &#x27;load: \[\&#x27;ui/lazy\&#x27;\]&#x27; : &#x27;&#x27; &#125;<br>&#125;,<br></code></pre></td></tr></table></figure>
+<h2 id="3-图片加载问题"><a href="#3-图片加载问题" class="headerlink" title="3 图片加载问题"></a>3 图片加载问题</h2><p>更新主题后，图片放置的位置也出现了变化，不可以再放在<code>_posts</code>文件夹下，需要放到<code>img</code>文件夹下，再引用。</p>
+<p>后续考虑加图床或者修改一下源码吧，不然写的时候渲染不出来不太方便。</p>
+<p>想学习的博客：<a target="_blank" rel="noopener" href="http://www.mmyosotis.cn/post/3433766775/">基于fluid主题的基础样式修改</a></p>
+<p><em>为了给博客加Letax渲染真的是踩坑无数，之前加的Mermaid渲染可能又要重新再配一遍，配的时候再记录吧。这次配下来的感想就是主题还是直接源码装比较好，便于修改。</em></p>
 
                 
               </div>
@@ -429,8 +453,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/08/AntDesignProLearning/" title="Ant Design Pro记录">
-                        <span class="hidden-mobile">Ant Design Pro记录</span>
+                      <a href="/2023/02/08/AntDesignProProblem/" title="Ant Design Pro项目问题记录">
+                        <span class="hidden-mobile">Ant Design Pro项目问题记录</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -549,6 +573,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -695,6 +743,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

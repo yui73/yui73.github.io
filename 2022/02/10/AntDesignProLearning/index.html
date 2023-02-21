@@ -17,25 +17,26 @@
   <meta name="author" content="Yui">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2023年2月8日，由于后来就直接上手项目了，因此用本博客记录一些难以解决的问题。  1 遇到的问题1.1 异步同步问题过去太久忘记了，只记得是拆开写，以后再遇到再记下来。 1.2 表单对齐问题ANTD PRO的表单有三种布局格式：horizontal，vertical，inline。 常用horizontal。当想让标签后的输入框对齐时，可以给form加个布局。 123456789101112">
+    <meta name="description" content="Ant Design Pro 前端学习 文档：Ant Design Pro文档  2.1 准备工作2.1.1 推荐技术栈 包管理：tyarn 安装npm install yarn tyarn -g文档：tyarn  Terminal：选择Windows Terminal   2.1.2 快速开始 初始化脚手架  12#使用yarnyarn create umi app  遇到的问题  解决方案：官">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ant Design Pro记录">
-<meta property="og:url" content="https://yui73.github.io/2023/02/08/AntDesignProLearning/index.html">
+<meta property="og:url" content="https://yui73.github.io/2022/02/10/AntDesignProLearning/index.html">
 <meta property="og:site_name" content="Yui&#39;s Blog">
-<meta property="og:description" content="2023年2月8日，由于后来就直接上手项目了，因此用本博客记录一些难以解决的问题。  1 遇到的问题1.1 异步同步问题过去太久忘记了，只记得是拆开写，以后再遇到再记下来。 1.2 表单对齐问题ANTD PRO的表单有三种布局格式：horizontal，vertical，inline。 常用horizontal。当想让标签后的输入框对齐时，可以给form加个布局。 123456789101112">
+<meta property="og:description" content="Ant Design Pro 前端学习 文档：Ant Design Pro文档  2.1 准备工作2.1.1 推荐技术栈 包管理：tyarn 安装npm install yarn tyarn -g文档：tyarn  Terminal：选择Windows Terminal   2.1.2 快速开始 初始化脚手架  12#使用yarnyarn create umi app  遇到的问题  解决方案：官">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/1_Form.png">
-<meta property="og:image" content="https://yui73.github.io/2023/02/08/AntDesignProLearning/AntDesignProLearning/yarnError.png">
+<meta property="og:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/yarnError.png">
 <meta property="og:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/yarnErrorSolution.png">
 <meta property="og:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/yarnSuccess.png">
 <meta property="og:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/React.png">
-<meta property="article:published_time" content="2023-02-08T18:12:00.000Z">
-<meta property="article:modified_time" content="2023-02-20T14:08:08.968Z">
+<meta property="article:published_time" content="2022-02-10T18:12:00.000Z">
+<meta property="article:modified_time" content="2023-02-21T12:02:18.820Z">
 <meta property="article:author" content="Yui">
 <meta property="article:tag" content="Front&#x2F;Interface">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/1_Form.png">
+<meta name="twitter:image" content="https://yui73.github.io/imgInPosts/AntDesignProLearning/yarnError.png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Ant Design Pro记录 - Yui&#39;s Blog</title>
@@ -76,7 +77,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -86,6 +87,21 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -219,8 +235,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-08 10:12" pubdate>
-          2023年2月8日 上午
+        <time datetime="2022-02-10 10:12" pubdate>
+          2022年2月10日 上午
         </time>
       </span>
     
@@ -232,7 +248,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.4k 字
+          713 字
         
       </span>
     
@@ -244,7 +260,7 @@
         
         
           <!-- compatible with older versions-->
-          12 分钟
+          6 分钟
         
       </span>
     
@@ -287,38 +303,29 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>2023年2月8日，由于后来就直接上手项目了，因此用本博客记录一些难以解决的问题。</p>
-</blockquote>
-<h2 id="1-遇到的问题"><a href="#1-遇到的问题" class="headerlink" title="1 遇到的问题"></a>1 遇到的问题</h2><h3 id="1-1-异步同步问题"><a href="#1-1-异步同步问题" class="headerlink" title="1.1 异步同步问题"></a>1.1 异步同步问题</h3><p>过去太久忘记了，只记得是拆开写，以后再遇到再记下来。</p>
-<h3 id="1-2-表单对齐问题"><a href="#1-2-表单对齐问题" class="headerlink" title="1.2 表单对齐问题"></a>1.2 表单对齐问题</h3><p>ANTD PRO的表单有三种布局格式：horizontal，vertical，inline。</p>
-<p>常用horizontal。当想让标签后的输入框对齐时，可以给form加个布局。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> formLayout = &#123;<br>    <span class="hljs-attr">labelCol</span>:&#123;<br>      <span class="hljs-attr">flex</span>:<span class="hljs-string">&#x27;80px&#x27;</span><br>    &#125;,<br>    <span class="hljs-attr">wrapperCol</span>:&#123;<br>      <span class="hljs-attr">flex</span>:<span class="hljs-string">&#x27;1&#x27;</span>,<br>    &#125;,<br>    <span class="hljs-comment">// 下面这也是一种，但不好用。</span><br>    <span class="hljs-comment">// labelCol:&#123;</span><br>    <span class="hljs-comment">//   xs:&#123;span:24&#125;,</span><br>    <span class="hljs-comment">//   sm:&#123;span:5&#125;,</span><br>    <span class="hljs-comment">//   md:&#123;span:4&#125;,</span><br>    <span class="hljs-comment">//   xxl:&#123;span:2&#125;,</span><br>    <span class="hljs-comment">// &#125;,</span><br>    <span class="hljs-comment">// wrapperCol:&#123;</span><br>    <span class="hljs-comment">//   xs:&#123;span:24&#125;,</span><br>    <span class="hljs-comment">//   sm:&#123;span:19&#125;,</span><br>    <span class="hljs-comment">//   md:&#123;span:20&#125;,</span><br>    <span class="hljs-comment">//   xxl:&#123;span:22&#125;,</span><br>    <span class="hljs-comment">// &#125;,</span><br>  &#125;;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ProForm</span> &#123;<span class="hljs-attr">...formLayout</span>&#125;/&gt;</span></span><br></code></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><img src="/imgInPosts/AntDesignProLearning/1_Form.png" srcset="/img/loading.gif" lazyload alt="Form"></p>
-<h2 id="2-Ant-Design-Pro-前端学习"><a href="#2-Ant-Design-Pro-前端学习" class="headerlink" title="2 Ant Design Pro 前端学习"></a>2 Ant Design Pro 前端学习</h2><blockquote>
+                <h1 id="Ant-Design-Pro-前端学习"><a href="#Ant-Design-Pro-前端学习" class="headerlink" title="Ant Design Pro 前端学习"></a>Ant Design Pro 前端学习</h1><blockquote>
 <p>文档：<a target="_blank" rel="noopener" href="https://pro.ant.design/zh-CN/docs/overview">Ant Design Pro文档</a></p>
 </blockquote>
-<h3 id="2-1-准备工作"><a href="#2-1-准备工作" class="headerlink" title="2.1 准备工作"></a>2.1 准备工作</h3><h4 id="2-1-1-推荐技术栈"><a href="#2-1-1-推荐技术栈" class="headerlink" title="2.1.1 推荐技术栈"></a>2.1.1 推荐技术栈</h4><ul>
+<h2 id="2-1-准备工作"><a href="#2-1-准备工作" class="headerlink" title="2.1 准备工作"></a>2.1 准备工作</h2><h3 id="2-1-1-推荐技术栈"><a href="#2-1-1-推荐技术栈" class="headerlink" title="2.1.1 推荐技术栈"></a>2.1.1 推荐技术栈</h3><ul>
 <li><p>包管理：tyarn 安装<code>npm install yarn tyarn -g</code><br>文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/tyarn">tyarn</a></p>
 </li>
 <li><p>Terminal：选择Windows Terminal</p>
 </li>
 </ul>
-<h4 id="2-1-2-快速开始"><a href="#2-1-2-快速开始" class="headerlink" title="2.1.2 快速开始"></a>2.1.2 快速开始</h4><ul>
+<h3 id="2-1-2-快速开始"><a href="#2-1-2-快速开始" class="headerlink" title="2.1.2 快速开始"></a>2.1.2 快速开始</h3><ul>
 <li>初始化脚手架</li>
 </ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment">#使用yarn</span><br>yarn create umi app<br></code></pre></td></tr></table></figure>
 <ul>
-<li><p>遇到的问题<br><img src="./AntDesignProLearning/yarnError.png" srcset="/img/loading.gif" lazyload alt="yarnError"></p>
+<li><p>遇到的问题<br><img src="/imgInPosts/AntDesignProLearning/yarnError.png" srcset="/img/loading.gif" lazyload alt="yarnError"></p>
 </li>
 <li><p>解决方案：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7">官方解释</a><br>&lt;/br&gt;因此修改一下powershell的保护机制即可解决。使用<code>set-executionpolicy remotesigned</code>的命令。效果如下：<br><img src="/imgInPosts/AntDesignProLearning/yarnErrorSolution.png" srcset="/img/loading.gif" lazyload alt="yarnErrorSolution"></p>
 <p>再次安装，效果如下，成功安装：<br><img src="/imgInPosts/AntDesignProLearning/yarnSuccess.png" srcset="/img/loading.gif" lazyload alt="yarnSuccess"></p>
 </li>
 </ul>
-<h3 id="2-2-基础结构"><a href="#2-2-基础结构" class="headerlink" title="2.2 基础结构"></a>2.2 基础结构</h3><h4 id="2-2-1-目录结构"><a href="#2-2-1-目录结构" class="headerlink" title="2.2.1 目录结构"></a>2.2.1 目录结构</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs sh">├── config                   <span class="hljs-comment"># umi 配置，包含路由，构建等配置</span><br>├── mock                     <span class="hljs-comment"># 本地模拟数据</span><br>├── public<br>│   └── favicon.png          <span class="hljs-comment"># Favicon</span><br>├── src<br>│   ├── assets               <span class="hljs-comment"># 本地静态资源</span><br>│   ├── components           <span class="hljs-comment"># 业务通用组件</span><br>│   ├── e2e                  <span class="hljs-comment"># 集成测试用例</span><br>│   ├── layouts              <span class="hljs-comment"># 通用布局</span><br>│   ├── models               <span class="hljs-comment"># 全局 dva model</span><br>│   ├── pages                <span class="hljs-comment"># 业务页面入口和常用模板</span><br>│   ├── services             <span class="hljs-comment"># 后台接口服务</span><br>│   ├── utils                <span class="hljs-comment"># 工具库</span><br>│   ├── locales              <span class="hljs-comment"># 国际化资源</span><br>│   ├── global.less          <span class="hljs-comment"># 全局样式</span><br>│   └── global.ts            <span class="hljs-comment"># 全局 JS</span><br>├── tests                    <span class="hljs-comment"># 测试工具</span><br>├── README.md<br>└── package.json<br></code></pre></td></tr></table></figure>
-<h4 id="2-2-2-页面开发使用图表"><a href="#2-2-2-页面开发使用图表" class="headerlink" title="2.2.2 页面开发使用图表"></a>2.2.2 页面开发使用图表</h4><p>使用Ant Design的图表：<code>yarn add @ant-design/charts</code></p>
-<h4 id="2-2-3一些报错"><a href="#2-2-3一些报错" class="headerlink" title="2.2.3一些报错"></a>2.2.3一些报错</h4><h5 id="网页控制台"><a href="#网页控制台" class="headerlink" title="网页控制台"></a>网页控制台</h5><p><img src="/imgInPosts/AntDesignProLearning/React.png" srcset="/img/loading.gif" lazyload alt="ReactError"></p>
+<h2 id="2-2-基础结构"><a href="#2-2-基础结构" class="headerlink" title="2.2 基础结构"></a>2.2 基础结构</h2><h3 id="2-2-1-目录结构"><a href="#2-2-1-目录结构" class="headerlink" title="2.2.1 目录结构"></a>2.2.1 目录结构</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs sh">├── config                   <span class="hljs-comment"># umi 配置，包含路由，构建等配置</span><br>├── mock                     <span class="hljs-comment"># 本地模拟数据</span><br>├── public<br>│   └── favicon.png          <span class="hljs-comment"># Favicon</span><br>├── src<br>│   ├── assets               <span class="hljs-comment"># 本地静态资源</span><br>│   ├── components           <span class="hljs-comment"># 业务通用组件</span><br>│   ├── e2e                  <span class="hljs-comment"># 集成测试用例</span><br>│   ├── layouts              <span class="hljs-comment"># 通用布局</span><br>│   ├── models               <span class="hljs-comment"># 全局 dva model</span><br>│   ├── pages                <span class="hljs-comment"># 业务页面入口和常用模板</span><br>│   ├── services             <span class="hljs-comment"># 后台接口服务</span><br>│   ├── utils                <span class="hljs-comment"># 工具库</span><br>│   ├── locales              <span class="hljs-comment"># 国际化资源</span><br>│   ├── global.less          <span class="hljs-comment"># 全局样式</span><br>│   └── global.ts            <span class="hljs-comment"># 全局 JS</span><br>├── tests                    <span class="hljs-comment"># 测试工具</span><br>├── README.md<br>└── package.json<br></code></pre></td></tr></table></figure>
+<h3 id="2-2-2-页面开发使用图表"><a href="#2-2-2-页面开发使用图表" class="headerlink" title="2.2.2 页面开发使用图表"></a>2.2.2 页面开发使用图表</h3><p>使用Ant Design的图表：<code>yarn add @ant-design/charts</code></p>
+<h3 id="2-2-3一些报错"><a href="#2-2-3一些报错" class="headerlink" title="2.2.3一些报错"></a>2.2.3一些报错</h3><h4 id="网页控制台"><a href="#网页控制台" class="headerlink" title="网页控制台"></a>网页控制台</h4><p><img src="/imgInPosts/AntDesignProLearning/React.png" srcset="/img/loading.gif" lazyload alt="ReactError"></p>
 <ul>
 <li>解决方案</li>
 </ul>
@@ -348,7 +355,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Ant Design Pro记录</div>
-      <div>https://yui73.github.io/2023/02/08/AntDesignProLearning/</div>
+      <div>https://yui73.github.io/2022/02/10/AntDesignProLearning/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +367,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月8日</div>
+          <div>2022年2月10日</div>
         </div>
       
       
@@ -392,9 +399,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/08/MyBlogUpgrade/" title="博客升级踩坑记录">
+                      <a href="/2022/02/10/WindowCommand/" title="Windows命令集合">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">博客升级踩坑记录</span>
+                        <span class="hidden-mobile">Windows命令集合</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -402,8 +409,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/02/SVMLearning/" title="SVM 学习">
-                        <span class="hidden-mobile">SVM 学习</span>
+                      <a href="/2022/02/08/LittleDiscovery_20220208/" title="玩游戏时的小发现">
+                        <span class="hidden-mobile">玩游戏时的小发现</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -522,6 +529,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -668,6 +699,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
