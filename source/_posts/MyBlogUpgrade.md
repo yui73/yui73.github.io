@@ -101,6 +101,10 @@ mathjax: https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/
 
 在head标签下添加上述内容即可。
 
+{% note info %}
+发现官方支持了直接在主题里开启强制https,在主题配置文件里开启，force_https: true 即可，目前先不改了。
+{% endnote %}
+
 ### 2.4 渲染出错
 
 *本来以为问题解决了，结果一刷新就乱码，搜了好多好多好多多多博客才找到是页面懒加载的问题。*
