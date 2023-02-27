@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>SSH多账户配置</title>
+    <link href="/2023/02/24/SSHMultiAccountConfig/"/>
+    <url>/2023/02/24/SSHMultiAccountConfig/</url>
+    
+    <content type="html"><![CDATA[<p><em>起因：想要在虚拟机上同时使用两个Git账户管理代码，相互之间不能影响，目前已经有一个账户了。</em></p><h2 id="1-生成SSH-Key"><a href="#1-生成SSH-Key" class="headerlink" title="1 生成SSH-Key"></a>1 生成SSH-Key</h2><p>目前已经有<code>id_rsa</code>和<code>id_rsa.pub</code>一对密钥了，再使用指令生成另一对。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">ssh-keygen -t rsa -C <span class="hljs-string">&quot;XXXX@XXX.com&quot;</span><br></code></pre></td></tr></table></figure><h2 id="2-修改-ssh-config文件"><a href="#2-修改-ssh-config文件" class="headerlink" title="2 修改 ~/.ssh/config文件"></a>2 修改 ~/.ssh/config文件</h2><p>将新生成的密钥<code>YYY</code>和原来的密钥都放到.ssh文件夹下。</p><p>修改内容如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># used by XXX</span><br>Host XX.XXX.XXX.XXX:XXXX<br>  HostName XXX<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/id_rsa<br>  IdentitiesOnly <span class="hljs-built_in">yes</span><br> <br><span class="hljs-comment"># used by YYY</span><br>Host YYY.github.com <span class="hljs-comment"># 防止冲突</span><br>  HostName github.com<br>  PreferredAuthentications publickey<br>  IdentityFile ~/.ssh/YYY<br>  IdentitiesOnly <span class="hljs-built_in">yes</span><br></code></pre></td></tr></table></figure><h2 id="3-将新生成的密钥添加到Github账户里并测试联通性"><a href="#3-将新生成的密钥添加到Github账户里并测试联通性" class="headerlink" title="3 将新生成的密钥添加到Github账户里并测试联通性"></a>3 将新生成的密钥添加到Github账户里并测试联通性</h2><p>使用如下指令测试联通性：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">ssh -T git@YYY.github.com <span class="hljs-comment">#后半部分和Config文件的Host保持一致</span><br></code></pre></td></tr></table></figure><p>联通了就可以正常使用啦 ~ OvO</p><h2 id="4-使用方法"><a href="#4-使用方法" class="headerlink" title="4 使用方法"></a>4 使用方法</h2><p>在<code>git clone</code>时，要将后缀改成Config文件里那种形式。随手拿个仓库举个栗子~</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 原来的</span><br>git <span class="hljs-built_in">clone</span> git@github.com:yui73/2022ECNUInfoVis.git<br><span class="hljs-comment"># 现在的</span><br>git <span class="hljs-built_in">clone</span> git@YYY.github.com:yui73/2022ECNUInfoVis.git<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SSH</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客升级踩坑记录</title>
     <link href="/2023/02/08/MyBlogUpgrade/"/>
     <url>/2023/02/08/MyBlogUpgrade/</url>
