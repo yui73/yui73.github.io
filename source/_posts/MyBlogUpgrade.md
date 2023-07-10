@@ -1,6 +1,7 @@
 ---
 title: 博客升级踩坑记录
 date: 2023-02-08 13:33:00
+updated: 2023-07-10 13:47:00
 tags: Blog
 excerpt: 记录了我给博客升级一系列踩坑的地方。
 ---
@@ -130,3 +131,73 @@ loader : {
 想学习的博客：[基于fluid主题的基础样式修改](http://www.mmyosotis.cn/post/3433766775/)
 
 *为了给博客加Letax渲染真的是踩坑无数，之前加的Mermaid渲染可能又要重新再配一遍，配的时候再记录吧。这次配下来的感想就是主题还是直接源码装比较好，便于修改。*
+
+## 4 自动化部署
+
+> 没有自动化部署，每次更新文章都要本地有环境先编译再上传到仓库里，有点麻烦考虑用自动化部署简化流程。
+
+### 4.1 巨硬家的DevOps
+
+（要钱并且要申请，看到一篇非常详细的[博客](https://www.imaegoo.com/2019/hexo-ci/)讲了如何配置）
+
+### 4.2 Github Actions
+
+配置简单，容易上手，将我从配环境的苦海当中拯救出来（*＾-＾*）
+
+参考：[知乎](https://zhuanlan.zhihu.com/p/137867759)
+
+- Step 1: 获取Token
+
+- Step 2: 配置Secret变量`GIT_EMAIL/GH_TOKEN`
+
+- Step 3: 在`.github`文件夹下，新建`workflows`文件夹，新增`deployment.yml`
+
+- Step 4: 添加工作流配置到`deployment.yml`中
+
+```yml
+# 文件路径 .github/workflows/deployment.yml
+name: Deployment
+
+on:
+  push:
+    branches: [hexo] # only push events on source branch trigger deployment
+
+jobs:
+  hexo-deployment:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Install dependencies & Generate static files
+      run: |
+        node -v
+        npm i -g hexo-cli
+        npm i
+        hexo clean
+        hexo g
+    - name: Deploy to Github Pages
+      env:
+        GIT_NAME: WillCAI2020
+        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+        REPO: github.com/WillCAI2020/WillCAI2020.github.io
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        cd ./public && git init && git add .
+        git config --global user.name $GIT_NAME
+        git config --global user.email $GIT_EMAIL
+        git commit -m "Site deployed by GitHub Actions"
+        git push --force --quiet "https://$GH_TOKEN@$REPO" master:master
+```
+
+- Step 5: 提交修改到同步仓库，进入Actions页面查看运行结果
