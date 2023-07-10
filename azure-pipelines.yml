@@ -1,0 +1,37 @@
+trigger:
+- master # Hexo 原项目分支名
+
+pool:
+  vmImage: 'Ubuntu-16.04' # 运行环境
+
+steps:
+- task: NodeTool@0 # 安装NodeJS
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Installing Node.js...'
+
+- task: InstallSSHKey@0 # 导入SSH
+  inputs:
+    hostName: github.com,52.74.223.119 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ== # 对应known_hosts
+    sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDCz1tqLzmMIXSNLq45K1ZMIbPKlFAD8bbaFAoqt14DRnFlO3iVLAPpRAzOaFbbMYm6o/6s0XtTSfReht57YHmYCJy6EnC0N5qwBvc6xmi9qrBVNVejkRXqEYkmmMVr3XaHT8aNT6pynxGcPcN/pkuUKPyrJQntacjxX96q9QQ30SvxJAs5dqbNxH2t1SPd99+eJuVMjs2qsMt5oZ4x39nUZHMd8cQA51DYAS5IjBLSF/3RcVf+JRXcvy1FIUsD63ImFPExcR5G61zgYIaGrME2tf/v0omSD6EZlqvvzRJOCWlb6G51M5BjGNXML1antORUEE/RsA+d9QnsRVPlin5PEoYOG5hhjF9Au94dok7uoms0BRY7hIxoJi8j47pw3+0joP+UI08+yPOHcdKVBVrb2BLP0WXK7tOSMYXw6CeKTcBNQmpoBdg5utCx/LlYgLeVwCubOz2bFstx1PaBYqgkSIs5FblKFU01bRv5qAGVSd09qHeYo5+JPwT9lr+l5yE= ad66204635@126.com # 对应id_rsa.pub
+    sshKeySecureFile: Yui # 对应私钥文件名
+  displayName: 'Installing SSH...'
+
+# 安装Hexo脚手架，Hexo依赖
+- script: |
+    npm install -g hexo-cli
+    npm install
+  displayName: 'Installing dependencies...'
+
+# 清理（可选），生成public静态目录（可选）
+- script: |
+    hexo clean
+    hexo g
+  displayName: 'Building...'
+
+# 生成
+- script: |
+    git config --global user.name "yui"
+    git config --global user.email "ad66204635@126.com"
+    hexo d
+  displayName: 'Deploying...'
