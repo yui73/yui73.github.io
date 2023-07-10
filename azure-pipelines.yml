@@ -1,5 +1,5 @@
 trigger:
-- sync # Hexo 原项目分支名
+- master # Hexo 原项目分支名
 
 pool:
   vmImage: 'Ubuntu-16.04' # 运行环境
