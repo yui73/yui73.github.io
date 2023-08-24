@@ -1,10 +1,6 @@
 # 文件路径 .github/workflows/deployment.yml
 name: Deployment
 
-# 解决方案
-permissions:
-  contents: write
-
 on:
   push:
     branches: sync # only push events on source branch trigger deployment
