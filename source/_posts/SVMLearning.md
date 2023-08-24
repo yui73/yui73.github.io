@@ -119,4 +119,22 @@ $C$ ：常数，常取1，方便计算
 
 > 大体思路是增加松弛变量，去高维空间找直线，理论涉及泛函
 
+### 2.1 优化理论
+
+经典教材：*Convex Optimization-Stephen Boyol* - 凸优化；*Nonlinear Programming*
+
+介绍一下原问题与对偶问题。
+
+### 2.2 原问题（Prime Problem）
+
+> 非常普适的问题
+
+最小化：$f(\omega)$ 或者 最大化：$-f(\omega)$
+
+限制条件：
+
+$$g_i(\omega) \leq 0 (i=1...K)$$
+
+$$ h_i(\omega) = 0 (i=1...M)$$
+
 欠着，日后更。。。
