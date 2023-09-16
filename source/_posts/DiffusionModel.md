@@ -150,7 +150,7 @@ $$x_{t} = \sqrt{\bar{a}_t}\times x_0+ \sqrt{1-\bar{a}_t}\times ϵ , ϵ \sim N(0,
 
 $$ x_t = \sqrt{a_{t}}\times x_{t-1} +  \sqrt{1-a_t} \times ϵ_{t} $$
 
-因此在反向过程中，我们需要从 $x_t$ 求 $x_{t-1}$，根据贝叶斯公式：
+因此在反向过程中，我们需要从 $x_{t}$ 求 $x_{t-1}$，根据贝叶斯公式：
 
 $$ p(x_{t-1}|x_{t}) = \frac{ q(x_{t}|x_{t-1})\times q(x_{t-1})}{q(x_{t})} $$
 
@@ -190,7 +190,9 @@ $$ P(x_{t-1}|x_{0}) = \frac{1}{\sqrt{2\pi } \sqrt{1-\bar{a}_{t-1}}} e^{\left (  
 
 将公式(7)(8)(9)代入公式(6)，得出方程：
 
-$$ \frac{ q(x_{t}|x_{t-1},x_{0})\times q(x_{t-1}|x_0)}{q(x_{t}|x_0)} = \left [
+$$ \frac{ q(x_{t}|x_{t-1},x_{0})\times q(x_{t-1}|x_0)}{q(x_{t}|x_0)} $$
+
+$$= \left [
   \frac{1}{\sqrt{2\pi} \sqrt{1-a_{t}}} e^{\left (  -\frac{1}{2}\frac{(x_{t}-\sqrt{a_t}x_{t-1})^2}{1-a_{t}}   \right ) } 
 \right ] * 
 \left [ 
@@ -204,18 +206,18 @@ $$ \frac{ q(x_{t}|x_{t-1},x_{0})\times q(x_{t-1}|x_0)}{q(x_{t}|x_0)} = \left [
 
 最后，可得：
 
-$$ \frac{1}{\sqrt{2\pi} \left ( {\color{Red} \frac{ \sqrt{1-a_t} \sqrt{1-\bar{a}_{t-1}} } {\sqrt{1-\bar{a}_{t}}}}  \right ) }  
+$$ \frac{1}{\sqrt{2\pi} \left ( {\frac{ \sqrt{1-a_t} \sqrt{1-\bar{a}_{t-1}} } {\sqrt{1-\bar{a}_{t}}}}  \right ) }  
 exp \left[
 -\frac{1}{2}
 \frac{
   \left(
     x_{t-1} - \left(
-      {\color{Purple} \frac{\sqrt{a_t}(1-\bar{a}_{t-1})}{1-\bar{a}_t}x_t
+      {\frac{\sqrt{a_t}(1-\bar{a}_{t-1})}{1-\bar{a}_t}x_t
       +
       \frac{\sqrt{\bar{a}_{t-1}}(1-a_t)}{1-\bar{a}_t}x_0} 
       \right)
   \right) ^2
-} {   \left( {\color{Red} \frac{ \sqrt{1-a_t} \sqrt{1-\bar{a}_{t-1}} } {\sqrt{1-\bar{a}_{t}}}}  \right)^2 }
+} {   \left( {\frac{ \sqrt{1-a_t} \sqrt{1-\bar{a}_{t-1}} } {\sqrt{1-\bar{a}_{t}}}}  \right)^2 }
 \right] $$
 
 由于 $x_0$ 为我们需要的结果，因此：
@@ -224,19 +226,19 @@ exp \left[
 
 
 $$ p(x_{t-1}|x_{t}) \sim N\left( 
-      {\color{Purple} \frac{\sqrt{a_t}(1-\bar{a}_{t-1})}{1-\bar{a}_t}x_t
+      {\frac{\sqrt{a_t}(1-\bar{a}_{t-1})}{1-\bar{a}_t}x_t
       +
       \frac{\sqrt{\bar{a}_{t-1}}(1-a_t)}{1-\bar{a}_t}\times \frac{x_t - \sqrt{1-\bar{a}_t}\times ϵ}{\sqrt{\bar{a}_t}} } ,
-       {\color{Red} \frac{ \beta_{t} (1-\bar{a}_{t-1}) } { 1-\bar{a}_{t}}} 
+       {\frac{ \beta_{t} (1-\bar{a}_{t-1}) } { 1-\bar{a}_{t}}} 
  \right) \tag{10}$$
 
 **由此，我们可以利用公式(10)推导出来的关系，由 $x_T$ 不断反向推导到 $x_0$**
 
 ### 3.4 含义解释
 
-我们理解含义为：任意时刻 $x_t$ 的图像，都是由 $x_0$ 时刻的图像直接加噪而来的。因此，只要知道ϵ，便可求出上一时刻 $x_{t-1}$ 的概率分布。
+我们理解含义为：任意时刻 $x_{t}$ 的图像，都是由 $x_{0}$ 时刻的图像直接加噪而来的。因此，只要知道ϵ，便可求出上一时刻$x_{t-1}$的概率分布。
 
-此处，训练神经网络用于预测  $x_t$ 时刻的图像相对于  $x_0$ 时刻的图像加入的噪声ϵ，然后得到 $x_{t-1}$ 时刻图像的概率分布，用此概率分布进行随机采样，便可得到 $x_{t-1}$ 时刻图像，反复迭代上述过程，便可获得 $x_0$ 时刻的图像
+此处，训练神经网络用于预测  $x_{t}$ 时刻的图像相对于  $x_{0}$ 时刻的图像加入的噪声ϵ，然后得到 $x_{t-1}$ 时刻图像的概率分布，用此概率分布进行随机采样，便可得到 $x_{t-1}$ 时刻图像，反复迭代上述过程，便可获得 $x_{0}$ 时刻的图像
 
 
 我们已知：
@@ -245,7 +247,7 @@ $$\bar{a}_{t} := a_{t}a_{t-1}a_{t-2}a_{t-3}...a_{2}a_{1}$$
 
 $$x_{t} = \sqrt{\bar{a}_t}\times x_0+ \sqrt{1-\bar{a}_t}\times ϵ , ϵ \sim N(0,I) $$
 
-$x_T$ 时刻 $\bar{a}$ 接近于0，因此 $x_T \approx ϵ$，即 $x_T$ 的图像近似于标准正态分布，即为任意一张标准正态分布噪声图像。
+$x_{T}$ 时刻 $\bar{a}$ 接近于0，因此 $x_T \approx ϵ$，即 $x_T$ 的图像近似于标准正态分布，即为任意一张标准正态分布噪声图像。
 
 也就是说，任意一张标准正态分布噪声图像都是由某张 $x_0$ 图像加噪声得来的，因此对标准正态分布的图像进行随机采样就可获得 $x_T$ 时刻图像。
 
