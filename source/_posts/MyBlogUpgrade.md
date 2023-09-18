@@ -66,6 +66,8 @@ _multiconfig.yml
 
   - 修改21行为``em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,``
 
+> 2023年9月18日：发现这个方法在接入自动化部署后会产生bug，由于是直接修改的node_modules，因此会导致Github Actions渲染失败。**解决方法：尝试使用patch-package进行维护，或者自己发布一个npm。XD**
+
 ### 2.2 选择CDN
 
 >处理完上述问题后，Mathjax报错`Mixed Content:blahblah http访问不到`
