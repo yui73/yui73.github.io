@@ -39,7 +39,7 @@ $$ x_t = \sqrt{a_{t}}\times x_{t-1} +  \sqrt{1-a_t} \times ϵ_{t} $$
 ### 2.1 避免多次迭代
 
 {% note info %}
-**我们从 $x_{t-2}$ 与 $x_{t}$ 的关系开始讨论：**
+**我们从$x_{t-2}$与$x_{t}$ 的关系开始讨论：**
 {% endnote %}
 
 我们根据方程(1)可得：
@@ -83,7 +83,7 @@ $$\sqrt{a_{t}(1-a_{t-1})} ϵ_{t-1} +  \sqrt{1-a_t} \times ϵ_t \sim N(0,1-a_{t}a
 $$ x_t = \sqrt{a_{t}a_{t-1}}\times x_{t-2} +  \sqrt{1-a_{t}a_{t-1}} \times ϵ \tag4$$
 
 {% note info %}
-**按照这个思路，我们进一步探讨 $x_{t-3}$ 与 $x_{t}$ 的关系：**
+**按照这个思路，我们进一步探讨$x_{t-3}$与$x_{t}$的关系：**
 {% endnote %}
 
 $$ x_{t-2} = \sqrt{a_{t-2}}\times x_{t-3} +  \sqrt{1-a_{t-2}} \times ϵ_{t-2} $$
@@ -104,11 +104,13 @@ $$ \sqrt{a_{t}a_{t-1}-a_{t}a_{t-1}a_{t-2}}\times ϵ_{t-2} \sim N(0,a_{t}a_{t-1}-
 
 $$ x_t = \sqrt{a_{t}a_{t-1}a_{t-2}}\times x_{t-3} +  \sqrt{1-a_{t}a_{t-1}a_{t-2}} \times ϵ $$
 
+{% note info %}
 由此，我们不难看出$x_t$与$x_{t-k}$的关系（可以使用数学归纳法证明）：
+{% endnote %}
 
 $$x_t = \sqrt{a_{t}a_{t-1}a_{t-2}a_{t-3}...a_{t-(k-2)}a_{t-(k-1)}}\times x_{t-k} +  \sqrt{1-a_{t}a_{t-1}a_{t-2}a_{t-3}...a_{t-(k-2)}a_{t-(k-1)}}\times ϵ$$
 
-$x_t$与$x_0$的关系：
+**$x_t$与$x_0$的关系：**
 
 $$x_t = \sqrt{a_{t}a_{t-1}a_{t-2}a_{t-3}...a_{2}a_{1}}\times x_{0} +  \sqrt{1-a_{t}a_{t-1}a_{t-2}a_{t-3}...a_{2}a_{1}}\times ϵ$$
 
@@ -134,7 +136,7 @@ $$P(A|B) = \frac{ P(B|A)P(A) }{ P(B) }$$
 
 简单来说，马尔可夫链某一时刻状态转移的概率只依赖于它的前一个状态，具有`无记忆性`。
 
-其数学表达为： $P(x_t|x_{t-1},x_{t-2}\dots,x_{0}) = P(x_t|x_{t-1}) $
+其数学表达为：$P(x_t|x_{t-1},x_{t-2}\dots,x_{0}) = P(x_t|x_{t-1})$
 
 掌握上述两个定理后，我们开始推导反向过程 $p$ (Reverse Process $p$)
 
