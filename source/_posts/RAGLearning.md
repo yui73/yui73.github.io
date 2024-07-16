@@ -30,7 +30,7 @@ RAG技术的早期阶段，高光时刻是在ChatGPT被广泛采用的时候。�
 
 整体流程：
 
-![Naive RAG](<../imgInPosts/RAGLearning/NAIVE RAG.png>)
+![NaiveRAG](/img/img_in_posts/RAGLearning/NAIVERAG.png)
 
 **缺陷：**
 

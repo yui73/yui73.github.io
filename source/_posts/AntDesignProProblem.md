@@ -43,7 +43,7 @@ const formLayout = {
 
 效果如下：
 
-![Form](/imgInPosts/AntDesignProLearning/1_Form.png)
+![Form](/img/img_in_posts/AntDesignProLearning/1_Form.png)
 
 ## 3 登录问题
 

@@ -78,7 +78,7 @@ tags: Machine Learning
     
        **业界常用**
     
-       ![10折交叉验证示意图](/imgInPosts/MachineLearning/1.png)
+       ![10折交叉验证示意图](/img/img_in_posts/MachineLearning/1.png)
     
     3. 自助法 
     

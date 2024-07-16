@@ -15,7 +15,7 @@ $\lambda$
 //因此推荐直接使用HTML支持的字符如下:
 &lambda;
 ```
-![Markdown字符]( /imgInPosts/MarkdownUsage/Markdown.png )
+![Markdown字符]( /img/img_in_posts/MarkdownUsage/Markdown.png )
 3 插入上下标
 H<sub>2</sub>O
 ```

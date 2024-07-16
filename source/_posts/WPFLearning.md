@@ -210,4 +210,4 @@ Console.WriteLine(b); // 10
 
 # 一些文档
 ### 1 WPF文档
-{% pdf ./Prism5forWPF.pdf %}
+{% pdf /doc/doc_in_posts/WPFLearning/Prism5forWPF.pdf %}

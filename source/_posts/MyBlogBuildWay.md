@@ -15,21 +15,21 @@ excerpt: 记录了我建站的详细过程。（小声：现在看来有很多�
 
 >下载地址:[Cygwin官网](http://www.cygwin.com/)
 
-![Cygwin-1]( /imgInPosts/MyBlogBuildWay/Cygwin.PNG )
+![Cygwin-1]( /img/img_in_posts/MyBlogBuildWay/Cygwin.PNG )
 
 >直接安装一路默认
 
-![Cygwin-2]( /imgInPosts/MyBlogBuildWay/Cygwin2.PNG )
-![Cygwin-3]( /imgInPosts/MyBlogBuildWay/Cygwin3.PNG )
-![Cygwin-4]( /imgInPosts/MyBlogBuildWay/Cygwin4.PNG )
-![Cygwin-5]( /imgInPosts/MyBlogBuildWay/Cygwin5.PNG )
+![Cygwin-2]( /img/img_in_posts/MyBlogBuildWay/Cygwin2.PNG )
+![Cygwin-3]( /img/img_in_posts/MyBlogBuildWay/Cygwin3.PNG )
+![Cygwin-4]( /img/img_in_posts/MyBlogBuildWay/Cygwin4.PNG )
+![Cygwin-5]( /img/img_in_posts/MyBlogBuildWay/Cygwin5.PNG )
 
 >这里推荐使用国内的镜像网站（找不到得自己添加）
 
-![Cygwin-6]( /imgInPosts/MyBlogBuildWay/Cygwin6.PNG )
+![Cygwin-6]( /img/img_in_posts/MyBlogBuildWay/Cygwin6.PNG )
 >这里是一些必须安装的包
 
-![Cygwin-7](/imgInPosts/MyBlogBuildWay/Cygwin7.PNG )
+![Cygwin-7](/img/img_in_posts/MyBlogBuildWay/Cygwin7.PNG )
 
 ### 1.2 在Cygwin下使用git的SSH服务
 
@@ -40,7 +40,7 @@ $ cygpath -w ~/
 
 ```
 
-![Cygwin-8](/imgInPosts/MyBlogBuildWay/Cygwin8.PNG )
+![Cygwin-8](/img/img_in_posts/MyBlogBuildWay/Cygwin8.PNG )
 
 #### 1.2.2 使用ssh-keygen命令生成密钥
 

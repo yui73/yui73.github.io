@@ -94,4 +94,4 @@ $$ x {\xrightarrow{f_{prompt}(x)}} x' {\xrightarrow{语言模型}} x {\rightarro
 
 根据语言模型选择训练策略，见下图。
 
-![训练策略](/imgInPosts/Prompt工程学习开篇/image.png)
+![训练策略](/img/img_in_posts/Prompt工程学习开篇/image.png)

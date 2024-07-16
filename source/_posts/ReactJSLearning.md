@@ -188,10 +188,10 @@ export default Show;
 
   效果如下：
   HelloWorld类没有属性参数
-  ![HelloWorld](/imgInPosts/ReactJSLearning/HelloWorld.png)
+  ![HelloWorld](/img/img_in_posts/ReactJSLearning/HelloWorld.png)
 
   Show类有属性参数
-  ![Show](/imgInPosts/ReactJSLearning/Show.png)
+  ![Show](/img/img_in_posts/ReactJSLearning/Show.png)
 
 **标签包裹**
 
@@ -223,11 +223,11 @@ export default Show;
   效果如下：
   HelloWorld类没有获取到包裹参数
   
-  ![HelloWorld2](/imgInPosts/ReactJSLearning/HelloWorld2.png)
+  ![HelloWorld2](/img/img_in_posts/ReactJSLearning/HelloWorld2.png)
 
   Show类有包裹参数
   
-  ![Show2](/imgInPosts/ReactJSLearning/Show2.png)
+  ![Show2](/img/img_in_posts/ReactJSLearning/Show2.png)
 
 #### 2.2.4 组件状态
 

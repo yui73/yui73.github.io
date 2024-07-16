@@ -27,14 +27,14 @@ yarn create umi app
 ```
 
 - 遇到的问题
-  ![yarnError](/imgInPosts/AntDesignProLearning/yarnError.png)
+  ![yarnError](/img/img_in_posts/AntDesignProLearning/yarnError.png)
 
 - 解决方案：[官方解释](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7)
   </br>因此修改一下powershell的保护机制即可解决。使用`set-executionpolicy remotesigned`的命令。效果如下：
-  ![yarnErrorSolution](/imgInPosts/AntDesignProLearning/yarnErrorSolution.png)
+  ![yarnErrorSolution](/img/img_in_posts/AntDesignProLearning/yarnErrorSolution.png)
 
   再次安装，效果如下，成功安装：
-  ![yarnSuccess](/imgInPosts/AntDesignProLearning/yarnSuccess.png)
+  ![yarnSuccess](/img/img_in_posts/AntDesignProLearning/yarnSuccess.png)
 
 ## 2.2 基础结构
 
@@ -70,7 +70,7 @@ yarn create umi app
 
 #### 网页控制台
 
-![ReactError](/imgInPosts/AntDesignProLearning/React.png)
+![ReactError](/img/img_in_posts/AntDesignProLearning/React.png)
 
 - 解决方案
 
