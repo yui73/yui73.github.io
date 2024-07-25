@@ -15,14 +15,14 @@ tags: Dev
 ## 1.VSCode Tunnels
 
 此法就是开启VSCode的管道功能：
-    - 通过安装`Remote - Tunnels`插件，打开VSCode的管道功能（这里也可以通过命令行的方式直接运行VSCode的程序打开）
-    - 登陆个人的Github或者Microsoft账号
-    - 打开`vscode.dev`网址
-    - 通过云虚拟机中转成功通过网页访问到本地电脑的资源
+- 通过安装`Remote - Tunnels`插件，打开VSCode的管道功能（这里也可以通过命令行的方式直接运行VSCode的程序打开）
+- 登陆个人的Github或者Microsoft账号
+- 打开`vscode.dev`网址
+- 通过云虚拟机中转成功通过网页访问到本地电脑的资源
 
 缺陷：
-    - 微软的Azure云服务并非免费，我用了几分钟，大概产生3刀的费用
-    - `vscode.dev`的网页版本对插件安装存在限制性
+- 微软的Azure云服务并非免费，我用了几分钟，大概产生3刀的费用
+- `vscode.dev`的网页版本对插件安装存在限制性
 
 ## 2. 使用Github CodeSpace
 
@@ -35,14 +35,14 @@ tags: Dev
 ![远端界面](/img/img_in_posts/GithubRemoteEnvTry/image.png)
 
 缺陷：
-    - 图片复制黏贴可以直接上传，但是移动到框架可以识别的位置会比较麻烦（其实自己搭图床都能解决）
+- 图片复制黏贴可以直接上传，但是移动到框架可以识别的位置会比较麻烦（其实自己搭图床都能解决）
 
 优点：
-    - 免费🆓
-    - 无需任何环境，只要browser + Github（国内的话）
-    - 可以安装VSCode插件🆗
-    - 可以远端直接提交Github并触发部署Actions，一键完成✅😆
-    - 可以随时随地记录论文阅读笔记了
+- 免费🆓
+- 无需任何环境，只要browser + Github（国内的话）
+- 可以安装VSCode插件🆗
+- 可以远端直接提交Github并触发部署Actions，一键完成✅😆
+- 可以随时随地记录论文阅读笔记了
 
 ### 2.1 收费问题
 
