@@ -32,7 +32,7 @@ tags: Dev
 
 这种方法并不访问我主机上的本地资源，而是直接起虚拟机去访问远端资源。
 
-![远端界面](/img/img_in_posts/image.png)
+![远端界面](/img/img_in_posts/GithubRemoteEnvTry/image.png)
 
 缺陷：
     - 图片复制黏贴可以直接上传，但是移动到框架可以识别的位置会比较麻烦（其实自己搭图床都能解决）

@@ -6,7 +6,7 @@ excerpt: 在玩游戏时发现的一个搞笑小彩蛋~OvO
 ---
 ## 小小发现
 某天深夜在一晚上酣畅淋漓的游戏后，在退出Steam时瞟了一眼库，突然发现一个有趣的东西。
-![bobo](./LittleDiscovery_20220208/bobo.png)
+![bobo](/img/img_in_posts/LittleDiscovery_20220208/bobo.png)
 当下直觉觉得是ASCII码，于是采用比较熟悉的C++尝试翻译。
 代码如下：
 ```cpp
