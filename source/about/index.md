@@ -8,6 +8,10 @@ layout: about
 
 **Halo ~ 这里是一名社畜，也是一名华东师范大学计算机专业的在读研究生，正在持续努力搭建博客。**
 
+<p align="center">
+    <img alt="Yui73's Github chart" src="https://ghchart.rshah.org/yui73" />
+</p>
+
 ## 年度寄语
 
 经过**2023**年的努力，我的博客环境变得相当便捷了，只要会用Git，自认为和动态博客的便捷程度大差不差了，博客更新的频率也变高不少。
