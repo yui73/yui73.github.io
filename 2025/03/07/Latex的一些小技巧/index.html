@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/headicon.jpg">
+  <link rel="icon" href="/img/headicon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Yui">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Latex的一些小技巧Latex在长论文排版时真的非常好用，学到了一些小技巧，下做简记。 1. 图片浮动问题因为Latex是自动计算图片位置的，因此会出现图片位置大混乱的情况。有两个办法可以对这种情况进行调整。 建议：整体论文定稿之后再进行图片位置或者大小调整。 1.1 使用H强制图片插入在当前位置123456\begin&amp;#123;figure&amp;#125;[H]    \centering">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latex的一些小技巧">
+<meta property="og:url" content="https://yui73.github.io/2025/03/07/Latex%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:site_name" content="Yui&#39;s Blog">
+<meta property="og:description" content="Latex的一些小技巧Latex在长论文排版时真的非常好用，学到了一些小技巧，下做简记。 1. 图片浮动问题因为Latex是自动计算图片位置的，因此会出现图片位置大混乱的情况。有两个办法可以对这种情况进行调整。 建议：整体论文定稿之后再进行图片位置或者大小调整。 1.1 使用H强制图片插入在当前位置123456\begin&amp;#123;figure&amp;#125;[H]    \centering">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-07T07:51:00.000Z">
+<meta property="article:modified_time" content="2025-03-07T10:19:29.470Z">
+<meta property="article:author" content="Yui">
+<meta property="article:tag" content="Dev">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Latex的一些小技巧 - Yui&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yui73.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+  
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 999; pointer-events: none;" ></canvas> 
+  <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+  <script type="text/javascript" src="/js/fireworks.js"></script>
+  
+
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Yui&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/4.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Latex的一些小技巧"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-07 15:51" pubdate>
+          2025年3月7日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          3.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          29 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Latex的一些小技巧</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Latex的一些小技巧"><a href="#Latex的一些小技巧" class="headerlink" title="Latex的一些小技巧"></a>Latex的一些小技巧</h1><p>Latex在长论文排版时真的非常好用，学到了一些小技巧，下做简记。</p>
+<h2 id="1-图片浮动问题"><a href="#1-图片浮动问题" class="headerlink" title="1. 图片浮动问题"></a>1. 图片浮动问题</h2><p>因为Latex是自动计算图片位置的，因此会出现图片位置大混乱的情况。有两个办法可以对这种情况进行调整。</p>
+<p><strong>建议：整体论文定稿之后再进行图片位置或者大小调整。</strong></p>
+<h3 id="1-1-使用H强制图片插入在当前位置"><a href="#1-1-使用H强制图片插入在当前位置" class="headerlink" title="1.1 使用H强制图片插入在当前位置"></a>1.1 使用<code>H</code>强制图片插入在当前位置</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[H]<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>[width=1<span class="hljs-keyword">\textwidth</span>]&#123;fig/yourfigure.png&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;图片&#125;<br>    <span class="hljs-keyword">\label</span>&#123;fig:2&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li><p>位置参数：</p>
+<ul>
+<li>h：here，此刻的位置</li>
+<li>t：top，置顶</li>
+<li>b：buttom，置底</li>
+<li>H：强制处于当前位置</li>
+</ul>
+</li>
+<li><p>宽度参数：</p>
+<ul>
+<li><code>width=1\textwidth</code>：宽度按照页面文字宽度的比例渲染，<code>0.5\textwidth</code>小数也是支持的🆗</li>
+<li><code>\label&#123;fig:2&#125;</code>：图片的引用路径，在正文使用<code>~\ref&#123;fig:2&#125;</code>进行引用，会自动进行正文的图注链接插入和图目录生成</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-直接在图片后面新起一页"><a href="#1-2-直接在图片后面新起一页" class="headerlink" title="1.2 直接在图片后面新起一页"></a>1.2 直接在图片后面新起一页</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\begin</span>&#123;figure&#125;[H]<br>    <span class="hljs-keyword">\centering</span><br>    <span class="hljs-keyword">\includegraphics</span>[width=1<span class="hljs-keyword">\textwidth</span>]&#123;fig/yourfigure.png&#125;<br>    <span class="hljs-keyword">\caption</span>&#123;图片&#125;<br>    <span class="hljs-keyword">\label</span>&#123;fig:2&#125;<br><span class="hljs-keyword">\end</span>&#123;figure&#125;<br><br><span class="hljs-keyword">\newpage</span><br></code></pre></td></tr></table></figure>
+<p>使用<code>\newpage</code>指令，这样至少不会和下一章的内容混在一起。</p>
+<h2 id="2-表格插入问题"><a href="#2-表格插入问题" class="headerlink" title="2. 表格插入问题"></a>2. 表格插入问题</h2><h3 id="2-1-快速构建表格"><a href="#2-1-快速构建表格" class="headerlink" title="2.1 快速构建表格"></a>2.1 快速构建表格</h3><p>万能的GPT给的网址：<a target="_blank" rel="noopener" href="https://www.tablesgenerator.com/">Tablesgenerator</a></p>
+<p>可视化的表格编辑，真的很方便</p>
+<ul>
+<li>支持直接黏贴数据</li>
+<li>支持CSV导入</li>
+<li>支持Latex代码导入和导出生成</li>
+</ul>
+<h3 id="2-2-行内数据换行"><a href="#2-2-行内数据换行" class="headerlink" title="2.2 行内数据换行"></a>2.2 行内数据换行</h3><p>可以使用<code>\\</code>和<code>\newline</code>，两种命令。</p>
+<p>位置参数、宽度参数和引用的使用同第一节图片插入。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\begin</span>&#123;table&#125;[htp]<br>	<span class="hljs-keyword">\centering</span> <span class="hljs-comment">% 表格居中</span><br>    <span class="hljs-comment">% \resizebox&#123;1\textwidth&#125; % 设置表格缩放</span><br>	<span class="hljs-keyword">\vspace</span>&#123;5pt&#125; <span class="hljs-comment">% 大括号内设置表格与正文之间的间距</span><br>        <span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;p&#123;0.9<span class="hljs-keyword">\textwidth</span>&#125;&#125;<br>            <span class="hljs-keyword">\hline</span><br>            <span class="hljs-keyword">\textbf</span>&#123;列标题&#125; <span class="hljs-keyword">\\</span><br>            <span class="hljs-keyword">\hline</span><br>            First <span class="hljs-keyword">\newline</span> Second<span class="hljs-keyword">\\</span><br>            <span class="hljs-keyword">\hline</span><br>        <span class="hljs-keyword">\end</span>&#123;tabular&#125;<br>        <span class="hljs-keyword">\caption</span>&#123;表格&#125; <span class="hljs-comment">% 大括号内定义图片标题</span><br>        <span class="hljs-keyword">\label</span>&#123;tab:1&#125; <span class="hljs-comment">% 大括号内定义图片标签，用于正文引用</span><br><span class="hljs-keyword">\end</span>&#123;table&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="2-3-标题与内容的行距调整"><a href="#2-3-标题与内容的行距调整" class="headerlink" title="2.3 标题与内容的行距调整"></a>2.3 标题与内容的行距调整</h3><p>在表格代码前插入<code>\renewcommand&#123;\arraystretch&#125;&#123;1.5&#125;</code>，这行命令将表格行与行间距扩大到原先的1.5倍。</p>
+<div class="note note-info">
+            <p>值得注意的是：使用<code>\\</code>命令进行行内换行的时候，会受到<code>\renewcommand{\arraystretch}{1.5}</code>命令的影响，因此行内换行的间距也会变大，而使用<code>\newline</code>则不会。</p>
+          </div>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\renewcommand</span>&#123;<span class="hljs-keyword">\arraystretch</span>&#125;&#123;1.5&#125;<br><span class="hljs-keyword">\begin</span>&#123;table&#125;[htp]<br>	<span class="hljs-keyword">\centering</span> <span class="hljs-comment">% 表格居中</span><br>    <span class="hljs-comment">% \resizebox&#123;1\textwidth&#125; % 设置表格缩放</span><br>	<span class="hljs-keyword">\vspace</span>&#123;5pt&#125; <span class="hljs-comment">% 大括号内设置表格与正文之间的间距</span><br>        <span class="hljs-keyword">\begin</span>&#123;tabular&#125;&#123;p&#123;0.9<span class="hljs-keyword">\textwidth</span>&#125;&#125;<br>            <span class="hljs-keyword">\hline</span><br>            <span class="hljs-keyword">\textbf</span>&#123;列标题&#125; <span class="hljs-keyword">\\</span><br>            <span class="hljs-keyword">\hline</span><br>          First <span class="hljs-keyword">\newline</span> Second<span class="hljs-keyword">\\</span><br>          <span class="hljs-keyword">\hline</span><br>        <span class="hljs-keyword">\end</span>&#123;tabular&#125;<br>        <span class="hljs-keyword">\caption</span>&#123;表格&#125; <span class="hljs-comment">% 大括号内定义图片标题</span><br>        <span class="hljs-keyword">\label</span>&#123;tab:1&#125; <span class="hljs-comment">% 大括号内定义图片标签，用于正文引用</span><br><span class="hljs-keyword">\end</span>&#123;table&#125;<br><br></code></pre></td></tr></table></figure>
+<h2 id="3-论文渲染版本控制"><a href="#3-论文渲染版本控制" class="headerlink" title="3. 论文渲染版本控制"></a>3. 论文渲染版本控制</h2><blockquote>
+<p>这段内容是从Overleaf上的华师大硕/博论文模板中复制📋到的。由于我一开始使用了导师提供的模板，但很眼馋这个模板的功能，因此将这个功能融合到自己的模板里，此处做一个学习记录。</p>
+</blockquote>
+<div class="note note-info">
+            <p><strong>主要功能：为了实现提交不同用处（盲审/学术不端检测/终稿）的论文时，可以快速渲染出符合要求的论文内容，不用手动去每个地方做修改。</strong></p><p><em>论文要修改非常多版本，每次都手动修改太麻烦，也非常容易出错。</em></p>
+          </div>
+<h3 id="3-1-定义相关变量"><a href="#3-1-定义相关变量" class="headerlink" title="3.1 定义相关变量"></a>3.1 定义相关变量</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\def</span> <span class="hljs-keyword">\docstyle</span> &#123;normal&#125; <span class="hljs-comment">% normal,tmlc,anonymous</span><br><br><span class="hljs-keyword">\def</span> <span class="hljs-keyword">\dd</span> &#123;anonymous&#125;<br><span class="hljs-keyword">\def</span> <span class="hljs-keyword">\de</span> &#123;tmlc&#125;<br><span class="hljs-keyword">\newif</span><span class="hljs-keyword">\ifnotanonymous</span><span class="hljs-keyword">\notanonymoustrue</span> <span class="hljs-comment">%定义是否开启盲审，默认不开启</span><br><span class="hljs-keyword">\newif</span><span class="hljs-keyword">\iftmlc</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>\docstyle</code>：文档类型的控制变量</li>
+<li><code>\dd</code>：字符串变量，用于判断是否是<code>anonymous</code>类型的变量（控制判断的逻辑分支）</li>
+<li><code>\de</code>：字符串变量，用于判断是否是<code>tmlc</code>类型的变量（控制判断的逻辑分支）</li>
+<li><code>\ifnotanonymous</code>：布尔值变量，<code>\notanonymoustrue</code>默认为<code>true</code></li>
+<li><code>\iftmlc</code>：布尔值变量，未定义初值，默认为<code>false</code></li>
+</ul>
+<h3 id="3-2-判断文档类型（修改控制变量）"><a href="#3-2-判断文档类型（修改控制变量）" class="headerlink" title="3.2 判断文档类型（修改控制变量）"></a>3.2 判断文档类型（修改控制变量）</h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\ifx</span> <span class="hljs-keyword">\docstyle</span> <span class="hljs-keyword">\dd</span><br>    <span class="hljs-keyword">\notanonymousfalse</span> <span class="hljs-comment">% 开启该行则为盲审版本，注释该行则为非盲审版本（即查重或终稿版本）</span><br><span class="hljs-keyword">\else</span><br>    <span class="hljs-keyword">\ifx</span> <span class="hljs-keyword">\docstyle</span> <span class="hljs-keyword">\de</span><br>        <span class="hljs-keyword">\tmlctrue</span> <span class="hljs-comment">% 开启该行则为查重版本，注释该行则为终稿版本（仅在上一行在注释状态下有效）</span><br>    <span class="hljs-keyword">\fi</span><br><span class="hljs-keyword">\fi</span><br></code></pre></td></tr></table></figure>
+<p>本段逻辑（伪代码）:</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-keyword">if</span> <span class="hljs-string">\docstyle</span> == <span class="hljs-string">\dd(anonymous):</span><br>    <span class="hljs-string">\notanonymous</span> = <span class="hljs-literal">false</span><br>else:<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">\docstyle</span> == <span class="hljs-string">\de(tmlc):</span><br>        <span class="hljs-string">\tmlc</span> = <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<h3 id="3-3-控制页面渲染"><a href="#3-3-控制页面渲染" class="headerlink" title="3.3 控制页面渲染"></a>3.3 控制页面渲染</h3><ul>
+<li>盲审：原创性✅，名单❌，隐藏致谢</li>
+<li>学术不端检测：原创性❌，名单❌，致谢❌</li>
+<li>终稿：都要</li>
+</ul>
+<h4 id="3-3-1-控制页面"><a href="#3-3-1-控制页面" class="headerlink" title="3.3.1 控制页面"></a>3.3.1 控制页面</h4><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\ifnotanonymous</span> <span class="hljs-comment">%非盲审，也就是查重版，不显示原创性+名单；终版全要</span><br>    <span class="hljs-keyword">\iftmlc</span><br>    <span class="hljs-keyword">\else</span><br>        <span class="hljs-keyword">\input</span> A3-COPYRIGHT.tex  <span class="hljs-comment">%注释掉部分</span><br>        <span class="hljs-keyword">\cleardoublepage</span><br>        <span class="hljs-keyword">\input</span> A4-MEMBERLIST.tex <span class="hljs-comment">%注释掉部分</span><br>        <span class="hljs-keyword">\cleardoublepage</span><br>    <span class="hljs-keyword">\fi</span><br><span class="hljs-keyword">\else</span> <span class="hljs-comment">%盲审仅显示原创性，不要名单</span><br>    <span class="hljs-keyword">\input</span> A3-COPYRIGHT.tex  <span class="hljs-comment">%注释掉部分</span><br>    <span class="hljs-keyword">\cleardoublepage</span> <span class="hljs-comment">%查重不显示</span><br><span class="hljs-keyword">\fi</span><br><br><span class="hljs-comment">%%%%%</span><br><span class="hljs-comment">%中间省略</span><br><span class="hljs-comment">%%%%%</span><br><br><span class="hljs-keyword">\ifnotanonymous</span> <span class="hljs-comment">%非盲审，查重：不要致谢，终稿要</span><br>    <span class="hljs-keyword">\iftmlc</span><br>    <span class="hljs-keyword">\else</span><br>        <span class="hljs-keyword">\phantomsection</span><br>        <span class="hljs-keyword">\input</span> D2-ACHNOWLEDGEMENT.tex<br>        <span class="hljs-keyword">\addcontentsline</span>&#123;toc&#125;&#123;chapter&#125;&#123;致谢&#125;<br>        <span class="hljs-keyword">\cleardoublepage</span> <span class="hljs-comment">%查重不显示</span><br>    <span class="hljs-keyword">\fi</span><br><span class="hljs-keyword">\else</span> <span class="hljs-comment">%盲审，需要短的致谢</span><br>    <span class="hljs-keyword">\phantomsection</span><br>    <span class="hljs-keyword">\input</span> D2-ACHNOWLEDGEMENT-TMLC.tex<br>    <span class="hljs-keyword">\addcontentsline</span>&#123;toc&#125;&#123;chapter&#125;&#123;致谢&#125;<br>    <span class="hljs-keyword">\cleardoublepage</span><br><span class="hljs-keyword">\fi</span><br></code></pre></td></tr></table></figure>
+<h4 id="3-3-2-控制页面内部内容渲染"><a href="#3-3-2-控制页面内部内容渲染" class="headerlink" title="3.3.2 控制页面内部内容渲染"></a>3.3.2 控制页面内部内容渲染</h4><p>使用下述语句控制名字和敏感信息的隐藏（只有匿名稿需要隐藏）</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs Latex"><span class="hljs-keyword">\ifnotanonymous</span> Your Name <span class="hljs-keyword">\else</span> *** <span class="hljs-keyword">\fi</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Dev/">#Dev</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Latex的一些小技巧</div>
+      <div>https://yui73.github.io/2025/03/07/Latex的一些小技巧/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Yui</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/22/%E5%9C%A8WIN10%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E7%9A%84%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="在WIN10环境搭建内网穿透远程桌面的过程记录">
+                        <span class="hidden-mobile">在WIN10环境搭建内网穿透远程桌面的过程记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/9.1.3/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"base"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20,"vOffset":30},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
