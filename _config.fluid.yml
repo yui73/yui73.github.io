@@ -928,6 +928,13 @@ links:
       #avatar: "/img/favicon.png"
       avatar: "/img/siha.jpg"
     }
+    - {
+      title: "NNNullptr南",
+      intro: "数学生的古早拼贴风格网站",
+      link: "https://xnmoe.com",
+      #avatar: "/img/favicon.png"
+      avatar: "/img/NNNullptr-avatar.png"
+    }
     # - {
     #   title: "Fluid Docs",
     #   intro: "主题使用指南",
